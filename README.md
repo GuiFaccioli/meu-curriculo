@@ -2,9 +2,9 @@
 
 ## Deploy
 
-Deploy publicado na Netlify:
+Deploy publicado na Vercel:
 
-https://guilherme-faccioli-dev.netlify.app/
+https://guilherme-faccioli-dev.vercel.app/
 
 
 Currículo online desenvolvido em React + TypeScript para apresentar perfil profissional, experiências, projetos, formação, certificações e competências técnicas de forma clara e responsiva.
