@@ -1,6 +1,6 @@
 # Currículo Online — Guilherme Faccioli
 
-Currículo online desenvolvido em React + TypeScript, com foco em apresentação profissional, projetos, experiências, formação, certificações e competências técnicas.
+Currículo online desenvolvido em React + TypeScript para apresentar perfil profissional, experiências, projetos, formação, certificações e competências técnicas de forma clara e responsiva.
 
 ## Tecnologias
 
@@ -24,7 +24,9 @@ npm run build
 
 ## Deploy
 
-Projeto preparado para deploy na Netlify.
+Deploy publicado na Netlify:
+
+https://guilherme-faccioli-dev.netlify.app/
 
 ## Configuração Netlify
 
@@ -41,6 +43,9 @@ dist
 ```
 
 ## Links
+
+Portfólio online:
+https://guilherme-faccioli-dev.netlify.app/
 
 GitHub:
 https://github.com/GuiFaccioli
