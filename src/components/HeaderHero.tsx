@@ -11,13 +11,16 @@ type HeaderHeroProps = {
 }
 
 export function HeaderHero({ name, title, subtitle, intro, links }: HeaderHeroProps) {
+  const hasSubtitle = subtitle.trim().length > 0
+  const hasIntro = intro.trim().length > 0
+
   return (
     <header className="hero card">
       <div className="hero-content">
         <h1>{name}</h1>
         <p className="hero-title">{title}</p>
-        <p className="hero-description">{subtitle}</p>
-        <p className="hero-intro">{intro}</p>
+        {hasSubtitle ? <p className="hero-description">{subtitle}</p> : null}
+        {hasIntro ? <p className="hero-intro">{intro}</p> : null}
         <SocialLinks links={links} />
       </div>
 

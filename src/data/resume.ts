@@ -46,9 +46,8 @@ export const resumeData = {
   name: 'Guilherme Faccioli',
   title: 'Desenvolvedor Web',
   subtitle:
-    'Construo aplicações web com JavaScript, Node.js, React e MySQL, conectando frontend, backend e banco de dados para resolver problemas reais.',
-  heroIntro:
-    'Tenho experiência anterior em suporte técnico e operação imobiliária, o que me ajuda a entender dores de usuários, processos e regras de negócio antes de transformar isso em sistema.',
+    'Sou estudante de Análise e Desenvolvimento de Sistemas e construo aplicações web com JavaScript, React, Node.js e MySQL. Minha experiência em suporte técnico fortaleceu minha capacidade de investigar problemas, analisar erros, testar funcionalidades e entender necessidades de usuários para criar soluções mais claras e funcionais.',
+  heroIntro: '',
   links: [
     { label: 'GitHub', href: 'https://github.com/GuiFaccioli' },
     {
@@ -57,23 +56,22 @@ export const resumeData = {
     },
     { label: 'E-mail', href: 'mailto:guifacciolic@gmail.com' },
   ] as ResumeLink[],
-  about:
-    'Sou estudante de Análise e Desenvolvimento de Sistemas na Universidade Anhembi Morumbi. Venho construindo projetos práticos para consolidar conhecimentos em JavaScript, Node.js, Express, React, MySQL e APIs REST.\n\nMinha experiência anterior em suporte técnico e gestão de processos imobiliários me trouxe uma base forte em investigação de problemas, atendimento a usuários, análise de erros, testes e organização de fluxos operacionais. Hoje busco aplicar essa experiência na construção de sistemas web úteis, organizados e próximos de problemas reais.',
+  about: '',
   skills: [
     {
       title: 'Frontend',
-      items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React','APIs REST'],
+      items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Consumo de APIs'],
     },
     {
       title: 'Backend',
       items: [
-  'Node.js',
-  'Express',
-  'MySQL',
-  'APIs REST',
-  'Autenticação com bcrypt',
-  'Integração frontend/backend',
-],
+        'Node.js',
+        'Express',
+        'MySQL',
+        'APIs REST',
+        'Autenticação com bcrypt',
+        'Integração com banco de dados',
+      ],
     },
     {
       title: 'Ferramentas',
@@ -84,10 +82,10 @@ export const resumeData = {
       items: [
         'CRUD',
         'Validação de formulários',
-        'Consumo de API',
-        'Banco de dados relacional',
+        'Modelagem relacional',
         'Organização de código',
         'Importação de dados',
+        'Regras de negócio',
       ],
     },
   ] as SkillGroupData[],
@@ -95,22 +93,22 @@ export const resumeData = {
     {
       name: 'ImobCheck',
       description:
-        'Sistema de gestão para imobiliárias criado para centralizar informações de proprietários, imóveis, inquilinos, contratos e importações.\n\nO projeto nasceu a partir de dores reais de uma operação imobiliária, como uso de planilhas, dados descentralizados, retrabalho e dificuldade de acompanhar vínculos entre pessoas, imóveis e contratos.\n\nDesenvolvido com JavaScript, Node.js, Express e MySQL, o sistema possui importação de planilhas, cadastro de proprietários, dados cadastrais e bancários, páginas individuais e integração entre frontend, API e banco de dados.',
+        'Sistema de gestão para imobiliárias criado para organizar dados de proprietários, imóveis, inquilinos, contratos, importações e relatórios em um único ambiente.\n\nO projeto nasceu da experiência prática com rotinas de locação, onde informações costumam ficar espalhadas em planilhas, documentos e controles manuais.\n\nA aplicação possui importação de arquivos, cadastro e edição de proprietários, armazenamento de dados cadastrais e bancários, páginas individuais por entidade e comunicação entre interface, API e banco MySQL.',
       technologies: ['JavaScript', 'Node.js', 'Express', 'MySQL', 'HTML', 'CSS', 'REST APIs'],
       highlights: [
         'Importação de arquivos .xlsx, .xls e .csv',
         'Cadastro e edição de proprietários',
         'Dados cadastrais e bancários',
         'Páginas individuais por entidade',
-        'Backend com Node.js, Express e MySQL',
-        'Projeto baseado em dores reais do setor imobiliário',
+        'Relatórios operacionais',
+        'Modelagem baseada em rotinas reais de locação',
       ],
     },
     {
       name: 'FlowLogin',
       link: 'https://github.com/GuiFaccioli/FlowLogin',
       description:
-        'Projeto full-stack de login e cadastro criado para praticar autenticação, validação de formulários e integração entre frontend, backend e banco de dados.\n\nA aplicação possui fluxo de cadastro de usuários, login com verificação de credenciais, rotas REST com Node.js e Express, persistência em MySQL e armazenamento seguro de senhas com hash usando bcrypt.\n\nO objetivo do projeto foi entender, na prática, como uma tela de login se conecta com uma API, como os dados são validados e como as informações são salvas e consultadas no banco.',
+        'Projeto full-stack de login e cadastro desenvolvido para praticar autenticação, validação de formulários e persistência de usuários.\n\nA aplicação possui cadastro, login com verificação de credenciais, rotas com Node.js e Express, banco MySQL e armazenamento de senhas com hash usando bcrypt.\n\nO foco do projeto foi entender o fluxo completo entre formulário, API, regra de validação e consulta ao banco.',
       technologies: [
         'HTML',
         'CSS',
@@ -124,11 +122,10 @@ export const resumeData = {
       highlights: [
         'Cadastro e login de usuários',
         'Hash de senhas com bcrypt',
-        'Validação de formulários no frontend',
-        'Rotas REST com Node.js e Express',
-        'Persistência de usuários em MySQL',
-        'Integração entre frontend, API e banco de dados',
-        'Tratamento de respostas de sucesso e erro',
+        'Validação de formulários',
+        'Rotas com Node.js e Express',
+        'Persistência em MySQL',
+        'Tratamento de respostas da API',
       ],
     },
   ] as Project[],
@@ -142,8 +139,8 @@ export const resumeData = {
         'Aumento do nível de satisfação dos clientes com os atendimentos em mais de 90%.',
         'Execução de testes manuais e validação de fluxos da aplicação.',
         'Identificação, registro e acompanhamento de bugs junto ao time técnico.',
-        'Apoio na criação de relatórios e acompanhamento de métricas para suporte à decisão.',
-        'Contribuição para melhorias no produto com base em feedbacks, erros recorrentes e problemas identificados pelos usuários.',
+        'Criação de relatórios e acompanhamento de métricas para apoio à decisão.',
+        'Contribuição para melhorias no produto a partir de feedbacks, erros recorrentes e dificuldades relatadas pelos usuários.',
       ],
     },
     {
@@ -155,7 +152,7 @@ export const resumeData = {
         'Atendimento a proprietários, inquilinos e interessados.',
         'Organização de documentos, contratos, prazos e pendências.',
         'Atuação como preposto em casos relacionados à área de locação.',
-        'Melhoria de processos internos e acompanhamento de fluxos operacionais.',
+        'Acompanhamento de demandas administrativas e melhoria de fluxos internos.',
       ],
     },
   ] as Experience[],

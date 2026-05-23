@@ -11,8 +11,6 @@ import { resumeData } from './data/resume'
 import './App.css'
 
 function App() {
-  const aboutParagraphs = resumeData.about.split('\n\n')
-
   return (
     <div className="app">
       <HeaderHero
@@ -24,14 +22,6 @@ function App() {
       />
 
       <main>
-        <SectionBlock title="Sobre">
-          <div className="about-copy">
-            {aboutParagraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </SectionBlock>
-
         <SectionBlock title="Projetos">
           <div className="projects-grid">
             {resumeData.projects.map((project) => (
