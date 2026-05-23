@@ -1,5 +1,12 @@
 # Currículo Online — Guilherme Faccioli
 
+## Deploy
+
+Deploy publicado na Netlify:
+
+https://guilherme-faccioli-dev.netlify.app/
+
+
 Currículo online desenvolvido em React + TypeScript para apresentar perfil profissional, experiências, projetos, formação, certificações e competências técnicas de forma clara e responsiva.
 
 ## Tecnologias
