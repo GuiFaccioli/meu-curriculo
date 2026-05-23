@@ -6,7 +6,9 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   const cardClassName =
-    project.name === 'ImobCheck' ? 'project-card project-card-featured' : 'project-card'
+    project.name === 'ImobCheck'
+      ? 'project-card project-card-featured motion-card'
+      : 'project-card motion-card'
 
   return (
     <article className={cardClassName}>

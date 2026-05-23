@@ -6,8 +6,8 @@
 export function SkillCategory({ title, items }: SkillCategoryProps) {
   const categoryClass =
     title === 'Frontend' || title === 'Backend'
-      ? 'skill-category skill-category--technical'
-      : 'skill-category skill-category--support'
+      ? 'skill-category skill-category--technical motion-card'
+      : 'skill-category skill-category--support motion-card'
 
   return (
     <article className={categoryClass}>

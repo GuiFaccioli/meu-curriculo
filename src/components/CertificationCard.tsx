@@ -6,7 +6,7 @@ type CertificationCardProps = {
 
 export function CertificationCard({ certification }: CertificationCardProps) {
   return (
-    <article className="certification-card">
+    <article className="certification-card motion-card">
       <h3>{certification.name}</h3>
       <p>{certification.issuer}</p>
       <span>Emitido em: {certification.issued}</span>

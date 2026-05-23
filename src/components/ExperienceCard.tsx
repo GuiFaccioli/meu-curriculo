@@ -6,7 +6,7 @@ type ExperienceCardProps = {
 
 export function ExperienceCard({ item }: ExperienceCardProps) {
   return (
-    <article className="experience-card">
+    <article className="experience-card motion-card">
       <div className="experience-top">
         <h3>{item.role}</h3>
         <span>{item.period}</span>

@@ -8,7 +8,7 @@ export function LanguageList({ items }: LanguageListProps) {
   return (
     <ul className="language-list">
       {items.map((language) => (
-        <li key={language.name}>
+        <li key={language.name} className="motion-card">
           <strong>{language.name}</strong>
           <span>{language.level}</span>
         </li>
