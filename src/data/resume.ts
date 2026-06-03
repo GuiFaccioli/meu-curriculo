@@ -69,7 +69,7 @@ export const resumeData = {
   subtitle:
     'Sou estudante de Análise e Desenvolvimento de Sistemas e construo aplicações web com JavaScript, React, Node.js e MySQL. Minha experiência em suporte técnico fortaleceu minha capacidade de investigar problemas, analisar erros, testar funcionalidades e entender necessidades de usuários para criar soluções mais claras e funcionais.',
   heroIntro:
-    'Portfólio redesenhado para evidenciar CTAs, projetos clicáveis e interações prontas para tracking futuro no GTM e GA4.',
+    'Desenvolvedor em formação, com foco em interfaces web, APIs, organização de dados e soluções práticas usando React, TypeScript, Node.js e MySQL.',
   links: [
     {
       label: 'Ver GitHub',
@@ -115,19 +115,19 @@ export const resumeData = {
   ] as SectionLink[],
   heroStats: [
     {
-      label: 'Projetos destacados',
+      label: 'Projetos práticos',
       value: '2',
-      detail: 'Casos práticos com foco em problema real e stack enxuta.',
+      detail: 'Aplicações com foco em CRUD, APIs, dashboards e interfaces web.',
     },
     {
-      label: 'Base técnica',
-      value: 'Full-stack',
-      detail: 'React, TypeScript, Node.js, Express e MySQL.',
+      label: 'Base full-stack',
+      value: 'React + Node',
+      detail: 'React, TypeScript, Node.js, Express e MySQL em projetos de estudo e portfólio.',
     },
     {
-      label: 'Contexto profissional',
+      label: 'Olhar analítico',
       value: 'Suporte + operação',
-      detail: 'Leitura de fluxo, diagnóstico e melhoria contínua.',
+      detail: 'Experiência investigando erros, fluxos, dados e necessidades de usuários.',
     },
   ] as HeroStat[],
   about: '',

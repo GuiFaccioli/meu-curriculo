@@ -19,7 +19,7 @@ export function HeaderHero({ name, title, subtitle, intro, links, stats }: Heade
     <header className="hero-band">
       <div className="hero-layout">
         <div className="hero-content">
-          <p className="hero-kicker">Currículo online • design editorial • tracking-ready</p>
+          <p className="hero-kicker">Desenvolvedor web • interfaces • APIs • dados</p>
           <h1>{name}</h1>
           <p className="hero-title">{title}</p>
           {hasSubtitle ? <p className="hero-description">{subtitle}</p> : null}
@@ -39,42 +39,49 @@ export function HeaderHero({ name, title, subtitle, intro, links, stats }: Heade
         </div>
 
         <aside className="hero-visual card" aria-label="Vista rápida do portfólio">
-          <div className="hero-visual-topbar" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <p>Portfolio / overview</p>
-          </div>
-
-          <div className="hero-visual-grid">
-            <div className="hero-visual-profile">
+          <div className="hero-visual-head">
+            <div className="hero-visual-image-wrap">
               <img
                 src={personaDev}
                 alt="Ilustração de desenvolvedor trabalhando com cachorro ao lado"
                 className="hero-illustration"
               />
-              <div>
-                <strong>Foco em interface e clareza</strong>
-                <p>React • TypeScript • Node.js • MySQL</p>
-              </div>
             </div>
-
-            <div className="hero-visual-code code-block">
-              <code>
-                {'portfolio.update({\n'}
-                {'  goal: "CTAs claros, cards clicáveis e tracking futuro",\n'}
-                {'  mode: "editorial",\n'}
-                {'  status: "ready"\n'}
-                {'})'}
-              </code>
+            <div>
+              <p className="hero-visual-label">Resumo técnico</p>
+              <h2 className="hero-visual-title">Tecnologia com foco prático</h2>
+              <p className="hero-visual-text">
+                Interfaces responsivas, consumo de APIs, organização de dados e projetos prontos
+                para evolução contínua.
+              </p>
             </div>
-
-            <ul className="hero-visual-pills" aria-label="Pontos fortes do portfólio">
-              <li>Projetos com problema e solução</li>
-              <li>Links diretos para ação</li>
-              <li>Estrutura pronta para GTM</li>
-            </ul>
           </div>
+
+          <div className="hero-visual-grid">
+            <div className="hero-visual-block">
+              <strong>Front-end</strong>
+              <p>React, TypeScript, CSS</p>
+            </div>
+            <div className="hero-visual-block">
+              <strong>Back-end</strong>
+              <p>Node.js, Express, MySQL</p>
+            </div>
+            <div className="hero-visual-block">
+              <strong>Prática</strong>
+              <p>APIs, CRUDs, dashboards e integração de dados</p>
+            </div>
+            <div className="hero-visual-block">
+              <strong>Diferencial</strong>
+              <p>Olhar analítico para problemas e métricas</p>
+            </div>
+          </div>
+
+          <ul className="hero-visual-pills" aria-label="Destaques do perfil">
+            <li>Interfaces responsivas</li>
+            <li>Consumo de APIs</li>
+            <li>Organização de dados</li>
+            <li>Projetos práticos com deploy</li>
+          </ul>
         </aside>
       </div>
     </header>
