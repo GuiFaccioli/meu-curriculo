@@ -6,7 +6,6 @@ import { LanguageList } from './components/LanguageList'
 import { ProjectCard } from './components/ProjectCard'
 import { SectionBlock } from './components/SectionBlock'
 import { SkillCategory } from './components/SkillCategory'
-import { SocialLinks } from './components/SocialLinks'
 import { resumeData } from './data/resume'
 import './App.css'
 
@@ -55,7 +54,7 @@ function App() {
           title={resumeData.title}
           subtitle={resumeData.subtitle}
           intro={resumeData.heroIntro}
-          links={resumeData.links}
+          links={resumeData.links.slice(0, 2)}
         />
 
         <SectionBlock
@@ -131,18 +130,12 @@ function App() {
         <SectionBlock
           id="contato"
           title="Contato"
-          eyebrow="Próximo passo"
-          description="Se o objetivo for conversar sobre oportunidades, projetos ou colaborações, os CTAs abaixo já estão prontos para uso e rastreamento futuro."
         >
           <div className="contact-band card">
-            <div className="contact-copy">
-              <p>
-                Quer avaliar meu perfil com mais contexto? Abra o GitHub, veja o LinkedIn,
-                baixe o currículo ou me chame por e-mail.
-              </p>
-            </div>
-
-            <SocialLinks links={resumeData.links} section="contato" />
+            <address className="contact-details">
+              <p>Contato: (11) 952695934</p>
+              <p>Email: guifacciolic@gmail.com</p>
+            </address>
           </div>
         </SectionBlock>
       </main>
