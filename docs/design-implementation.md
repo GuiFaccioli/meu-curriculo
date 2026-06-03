@@ -1,12 +1,20 @@
 # Design implementation
 
+Este documento resume o estado atual da interface do portfólio e os principais
+ajustes visuais e estruturais feitos para deixá-lo mais profissional, claro e fácil
+de navegar.
+
 ## O que foi alterado
 
-- O portfólio saiu de um visual azul genérico para uma linguagem editorial em canvas claro, com CTA laranja e cartões com bordas sutis.
-- A home ganhou uma navegação superior com links para seções importantes e ações rápidas no topo.
-- O hero passou a ter CTAs claros, resumo rápido em cards e uma área visual mais informativa.
-- A seção de projetos foi redesenhada para expor problema, stack, destaques e ações por projeto.
-- As áreas de experiência, competências, formação, certificações e contato foram reorganizadas para melhorar escaneabilidade.
+- O portfólio saiu de um visual genérico para uma linguagem editorial mais limpa, com
+  cards sutis, foco em legibilidade e CTAs mais objetivos.
+- A navegação superior ficou mais compacta e prioriza as ações mais úteis.
+- O hero foi simplificado para comunicar nome, título, proposta profissional e ações
+  diretas.
+- As seções principais foram organizadas em accordion para reduzir ruído visual.
+- A área de projetos passou a destacar problema, stack, links e ações úteis.
+- Competências, formação/certificações e contato foram reorganizados para leitura
+  vertical e escaneável.
 
 ## Componentes alterados
 
@@ -18,37 +26,42 @@
 - `src/components/ProjectCard.tsx`
 - `src/components/SectionBlock.tsx`
 - `src/components/SocialLinks.tsx`
+- `src/components/CertificationCard.tsx`
 
-## Elementos clicáveis criados ou reforçados
+## Interações principais
 
-- `Ver GitHub`
-- `Ver LinkedIn`
-- `Baixar currículo`
-- `Entrar em contato`
-- Navegação para `Projetos`, `Experiência`, `Competências` e `Contato`
-- Ações dos projetos: `Abrir deploy` e `Ver repositório`
+- Links de navegação para seções importantes
+- CTAs de GitHub e LinkedIn no topo
+- Ações de projeto: `Abrir deploy` e `Ver repositório`
 - Link de retorno ao topo no footer
+- Accordions abrem e fecham por clique ou teclado
 
-## Pronto para tracking futuro
+## Pronto para tracking
 
-Foram adicionados atributos como:
+A interface já expõe atributos como:
 
 - `data-track`
 - `data-track-type`
 - `data-section`
 - `data-project-name`
 
-Esses atributos já preparam a interface para eventos como:
+Esses atributos suportam os eventos:
 
 - `portfolio_click`
-- `project_click`
-- `contact_click`
-- `resume_click`
+- `section_toggle`
 - `section_view`
 - `engagement_time_checkpoint`
 
+## Tracking e validação
+
+- O tracking está centralizado em `window.dataLayer`.
+- O GTM continua preparado via `VITE_GTM_ID`.
+- O GA4 é configurado dentro do GTM.
+- Os eventos já foram validados no GA4 Realtime e no DebugView.
+
 ## Observações
 
-- O tracking não foi implementado nesta etapa.
-- O GTM continua preparado via `VITE_GTM_ID`.
-- O currículo foi disponibilizado como arquivo estático em `public/` para suportar o CTA de download.
+- O comportamento de accordion por hover foi removido.
+- O fluxo atual prioriza interações intencionais do usuário.
+- O currículo de download foi disponibilizado como arquivo estático em `public/`
+  para suportar o CTA correspondente.

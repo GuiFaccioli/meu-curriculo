@@ -3,6 +3,8 @@
 Este projeto usa `window.dataLayer` via Google Tag Manager. O GA4 deve ser configurado
 somente dentro do GTM, sem `gtag.js` direto no app.
 
+Os eventos descritos aqui já foram validados no GA4 Realtime.
+
 ## Debug local
 
 Para ver logs de debug no navegador durante o desenvolvimento:

@@ -13,7 +13,7 @@ VITE_GTM_ID=GTM-XXXXXXX
 Exemplos comuns:
 
 - `.env.local` para desenvolvimento local
-- variáveis de ambiente do Vercel, Netlify ou outro provedor de deploy
+- variáveis de ambiente da Vercel ou de outro provedor de deploy
 
 ## O que está implementado
 
@@ -23,6 +23,7 @@ Exemplos comuns:
 - Não existe configuração de GA4 no código do projeto.
 - Os eventos são enviados via `window.dataLayer` com `portfolio_click`, `section_toggle`, `section_view` e `engagement_time_checkpoint`.
 - Os cards de projeto usam `data-track="project_click"` na interface, mas são normalizados para o evento `portfolio_click` no tracker central.
+- Esses eventos já foram validados no GA4 Realtime.
 
 ## Como configurar o GA4
 
