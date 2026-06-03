@@ -11,7 +11,7 @@ type SectionBlockProps = {
   defaultOpen?: boolean
 }
 
-type InteractionType = 'click' | 'hover' | 'keyboard' | 'unknown'
+type InteractionType = 'click' | 'keyboard' | 'unknown'
 
 export function SectionBlock({
   id,
@@ -67,34 +67,12 @@ export function SectionBlock({
     })
   }, [defaultOpen, sectionName, title])
 
-  const openSection = (interactionType: InteractionType, shouldTrackToggle: boolean) => {
-    if (isOpen) {
-      return
-    }
-
-    setIsOpen(true)
-
-    emitView()
-
-    if (shouldTrackToggle && interactionType !== 'unknown') {
-      emitToggle('open', interactionType)
-    }
-  }
-
-  const closeSection = (interactionType: InteractionType) => {
-    if (!isOpen) {
-      return
-    }
-
-    setIsOpen(false)
-
-    if (interactionType !== 'unknown') {
-      emitToggle('closed', interactionType)
-    }
-  }
-
   const toggleSection = (interactionType: InteractionType) => {
     const nextOpen = !isOpen
+
+    if (nextOpen === isOpen) {
+      return
+    }
 
     setIsOpen(nextOpen)
 
@@ -113,8 +91,6 @@ export function SectionBlock({
       className={`section card ${isOpen ? 'section--open' : 'section--closed'}`}
       aria-labelledby={headingId}
       data-section={sectionName}
-      onMouseEnter={() => openSection('hover', false)}
-      onMouseLeave={() => closeSection('hover')}
     >
       <div className="section-head">
         {eyebrow ? <p className="section-eyebrow">{eyebrow}</p> : null}
@@ -125,6 +101,7 @@ export function SectionBlock({
             className="section-toggle"
             aria-expanded={isOpen}
             aria-controls={contentId}
+            aria-label={`${isOpen ? 'Close' : 'Open'} ${title}`}
             data-track="section_toggle"
             data-track-type="accordion"
             data-section={sectionName}
