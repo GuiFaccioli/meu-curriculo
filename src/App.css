@@ -152,13 +152,14 @@ code {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  min-height: 40px;
-  padding: 0.64rem 1rem;
+  min-height: 38px;
+  padding: 0.5rem 0.85rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   font-weight: 600;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .top-nav-action--primary,
@@ -181,6 +182,12 @@ code {
   background: var(--color-surface);
   color: var(--color-ink);
   border-color: var(--color-hairline-strong);
+}
+
+.top-nav-action .social-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
 }
 
 .hero-link--download {

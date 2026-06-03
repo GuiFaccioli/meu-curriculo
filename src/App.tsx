@@ -5,6 +5,7 @@ import { HeaderHero } from './components/HeaderHero'
 import { LanguageList } from './components/LanguageList'
 import { ProjectCard } from './components/ProjectCard'
 import { SectionBlock } from './components/SectionBlock'
+import { SocialLinkIcon } from './components/SocialLinks'
 import { SkillCategory } from './components/SkillCategory'
 import { resumeData } from './data/resume'
 import './App.css'
@@ -42,6 +43,7 @@ function App() {
               data-track-type={link.trackType}
               data-section="top-nav"
             >
+              <SocialLinkIcon kind={link.kind} />
               {link.label}
             </a>
           ))}
@@ -54,7 +56,6 @@ function App() {
           title={resumeData.title}
           subtitle={resumeData.subtitle}
           intro={resumeData.heroIntro}
-          links={resumeData.links.slice(0, 2)}
         />
 
         <SectionBlock
