@@ -3,6 +3,23 @@
 Este projeto usa `window.dataLayer` via Google Tag Manager. O GA4 deve ser configurado
 somente dentro do GTM, sem `gtag.js` direto no app.
 
+## Debug local
+
+Para ver logs de debug no navegador durante o desenvolvimento:
+
+1. Defina `VITE_TRACKING_DEBUG=true` no seu arquivo `.env.local` ou equivalente.
+2. Inicie o app em modo de desenvolvimento.
+3. Abra o console do navegador.
+
+Quando o debug está ativo, cada evento enviado ao `dataLayer` aparece em um grupo
+recolhido do console com:
+
+- nome do evento
+- payload enviado
+- horário aproximado
+
+Em produção, os logs não aparecem por padrão.
+
 ## Evento `portfolio_click`
 
 Dispara quando o usuário clica em links e CTAs marcados com `data-track`.

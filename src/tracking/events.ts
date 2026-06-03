@@ -59,15 +59,45 @@ export function ensureDataLayer(): Array<Record<string, unknown>> {
   return window.dataLayer
 }
 
+export function isTrackingDebugEnabled(): boolean {
+  if (!isBrowser()) {
+    return false
+  }
+
+  return import.meta.env.DEV || import.meta.env.VITE_TRACKING_DEBUG === 'true'
+}
+
+function logTrackingEvent(eventName: string, params: Record<string, unknown>): void {
+  if (!isTrackingDebugEnabled() || typeof console === 'undefined') {
+    return
+  }
+
+  const timestamp = new Date().toISOString()
+
+  if (typeof console.groupCollapsed === 'function') {
+    console.groupCollapsed(`[tracking] ${eventName} @ ${timestamp}`)
+    console.log('event', eventName)
+    console.log('payload', params)
+    console.log('timestamp', timestamp)
+    console.groupEnd()
+    return
+  }
+
+  console.log(`[tracking] ${eventName} @ ${timestamp}`, params)
+}
+
 export function trackEvent(eventName: string, params: Record<string, unknown>): void {
   if (!isBrowser()) {
     return
   }
 
-  ensureDataLayer().push({
+  const payload = {
     event: eventName,
     ...params,
-  })
+  }
+
+  ensureDataLayer().push(payload)
+  logTrackingEvent(eventName, payload)
 }
 
 export function trackPortfolioClick(params: PortfolioClickParams): void {
