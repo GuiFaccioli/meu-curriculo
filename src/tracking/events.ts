@@ -19,7 +19,7 @@ export type SectionToggleParams = {
   section_name: string
   section_title: string
   toggle_state: 'open' | 'closed'
-  interaction_type: 'click' | 'hover' | 'keyboard' | 'unknown'
+  interaction_type: 'click' | 'keyboard'
   page_path: string
 }
 

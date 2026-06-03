@@ -79,7 +79,7 @@ Parâmetros recomendados:
 - `section_name`
 - `section_title`
 - `toggle_state`
-- `interaction_type`
+- `interaction_type` (`click` ou `keyboard`)
 - `page_path`
 
 ### `engagement_time_checkpoint`

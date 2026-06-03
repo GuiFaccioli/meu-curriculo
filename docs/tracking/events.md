@@ -86,7 +86,7 @@ Não é enviado por hover visual.
   section_name: "projects",
   section_title: "Projetos",
   toggle_state: "open" | "closed",
-  interaction_type: "click" | "hover" | "keyboard" | "unknown",
+  interaction_type: "click" | "keyboard",
   page_path: "/"
 }
 ```
