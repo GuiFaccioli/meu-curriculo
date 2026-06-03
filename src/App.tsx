@@ -83,49 +83,43 @@ function App() {
           </div>
         </SectionBlock>
 
-        <div className="cluster-grid">
-          <SectionBlock
-            id="competencias"
-            title="Competências"
-            eyebrow="Base técnica"
-            description="Organizei as habilidades em blocos para facilitar leitura, comparação e futura instrumentação de engajamento."
-          >
-            <div className="skills-grid">
-              {resumeData.skills.map((group) => (
-                <SkillCategory key={group.title} title={group.title} items={group.items} />
-              ))}
-            </div>
+        <SectionBlock
+          id="competencias"
+          title="Competências"
+          eyebrow="Base técnica"
+          description="Organizei as habilidades em blocos para facilitar leitura, comparação e futura instrumentação de engajamento."
+        >
+          <div className="stack vertical-list">
+            {resumeData.skills.map((group) => (
+              <SkillCategory key={group.title} title={group.title} items={group.items} />
+            ))}
 
             <div className="languages-panel">
               <h3>Idiomas</h3>
               <LanguageList items={resumeData.languages} />
             </div>
-          </SectionBlock>
+          </div>
+        </SectionBlock>
 
-          <SectionBlock
-            id="formacao"
-            title="Formação e certificações"
-            eyebrow="Credenciais"
-            description="Formação acadêmica e certificações que reforçam consistência técnica e capacidade de aprendizado contínuo."
-          >
-            <div className="stack">
-              <div className="stack">
-                {resumeData.education.map((education) => (
-                  <EducationCard key={`${education.course}-${education.period}`} education={education} />
-                ))}
-              </div>
+        <SectionBlock
+          id="formacao"
+          title="Formação e certificações"
+          eyebrow="Credenciais"
+          description="Formação acadêmica e certificações que reforçam consistência técnica e capacidade de aprendizado contínuo."
+        >
+          <div className="stack vertical-list">
+            {resumeData.education.map((education) => (
+              <EducationCard key={`${education.course}-${education.period}`} education={education} />
+            ))}
 
-              <div className="stack">
-                {resumeData.certifications.map((certification) => (
-                  <CertificationCard
-                    key={`${certification.name}-${certification.issued}`}
-                    certification={certification}
-                  />
-                ))}
-              </div>
-            </div>
-          </SectionBlock>
-        </div>
+            {resumeData.certifications.map((certification) => (
+              <CertificationCard
+                key={`${certification.name}-${certification.issued}`}
+                certification={certification}
+              />
+            ))}
+          </div>
+        </SectionBlock>
 
         <SectionBlock
           id="contato"

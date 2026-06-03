@@ -330,6 +330,14 @@ main {
   gap: 0.9rem;
 }
 
+.vertical-list {
+  gap: 0;
+}
+
+.vertical-list > * + * {
+  margin-top: 1rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -451,7 +459,7 @@ main {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.85rem;
 }
 
@@ -467,12 +475,31 @@ main {
   background: var(--color-surface);
 }
 
+.vertical-list > .skill-category,
+.vertical-list > .education-card,
+.vertical-list > .certification-card,
+.vertical-list > .languages-panel {
+  padding: 0 0 1rem;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-hairline);
+  background: transparent;
+}
+
+.vertical-list > .skill-category:last-child,
+.vertical-list > .education-card:last-child,
+.vertical-list > .certification-card:last-child,
+.vertical-list > .languages-panel:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
 .skill-category h3,
 .languages-panel h3 {
   color: var(--color-ink);
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
 }
 
 .skill-text-list {
@@ -490,21 +517,19 @@ main {
 
 .language-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  display: grid;
+  gap: 0.45rem;
   padding: 0;
   margin-top: 0.35rem;
 }
 
 .language-list li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.7rem;
-  border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-pill);
-  background: var(--color-canvas-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-hairline-soft);
+  background: transparent;
 }
 
 .language-list strong {
@@ -519,6 +544,12 @@ main {
   color: var(--color-ink);
   font-size: 1rem;
   font-weight: 600;
+}
+
+.education-card,
+.certification-card {
+  display: grid;
+  gap: 0.3rem;
 }
 
 .experience-top {
@@ -540,9 +571,16 @@ main {
   margin-top: 0.8rem;
 }
 
+.education-card p,
+.certification-card p,
+.certification-card span,
+.certification-card small {
+  line-height: 1.5;
+}
+
 .certification-card a {
   display: inline-flex;
-  margin-top: 0.55rem;
+  margin-top: 0.4rem;
   color: var(--color-primary);
   font-size: 0.88rem;
   font-weight: 600;
