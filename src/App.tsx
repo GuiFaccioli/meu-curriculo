@@ -8,9 +8,12 @@ import { SectionBlock } from './components/SectionBlock'
 import { SocialLinkIcon } from './components/SocialLinks'
 import { SkillCategory } from './components/SkillCategory'
 import { resumeData } from './data/resume'
+import { usePortfolioTracking } from './tracking/usePortfolioTracking'
 import './App.css'
 
 function App() {
+  usePortfolioTracking()
+
   return (
     <div className="app-shell">
       <header className="top-nav">

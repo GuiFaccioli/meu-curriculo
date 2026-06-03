@@ -1,3 +1,5 @@
+import { ensureDataLayer } from './events'
+
 declare global {
   interface Window {
     dataLayer?: Array<Record<string, unknown>>
@@ -17,8 +19,7 @@ export function initializeGtm(): void {
     return
   }
 
-  window.dataLayer = window.dataLayer ?? []
-  window.dataLayer.push({
+  ensureDataLayer().push({
     'gtm.start': Date.now(),
     event: 'gtm.js',
   })
