@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo — Guilherme Faccioli</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #26251e;
+        --body: #5a5852;
+        --canvas: #f7f7f4;
+        --surface: #ffffff;
+        --hairline: #e6e5e0;
+        --accent: #f54e00;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--body);
+        font: 400 15px/1.6 Inter, system-ui, sans-serif;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 40px 24px 56px;
+      }
+
+      header,
+      section {
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 16px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--ink);
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: 34px;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+      }
+
+      h2 {
+        margin-bottom: 12px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .lead {
+        margin-top: 10px;
+        max-width: 68ch;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 14px;
+      }
+
+      .meta a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .item {
+        padding: 16px;
+        border: 1px solid var(--hairline);
+        border-radius: 12px;
+        background: #fafaf7;
+      }
+
+      .item h3 {
+        font-size: 16px;
+      }
+
+      .item p,
+      .item li {
+        margin-top: 8px;
+      }
+
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      .pill-list li {
+        padding: 4px 10px;
+        border: 1px solid var(--hairline);
+        border-radius: 9999px;
+        background: var(--surface);
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .links a {
+        color: var(--accent);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        main {
+          padding: 0;
+        }
+
+        header,
+        section,
+        .item {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Guilherme Faccioli</h1>
+        <p class="lead">Desenvolvedor Web • React • TypeScript • Node.js • MySQL</p>
+        <p class="lead">
+          Estudante de Análise e Desenvolvimento de Sistemas com experiência em suporte
+          técnico, investigação de problemas, validação de fluxos e construção de soluções web
+          mais claras e funcionais.
+        </p>
+        <div class="meta">
+          <a href="mailto:guifacciolic@gmail.com">guifacciolic@gmail.com</a>
+          <a href="https://github.com/GuiFaccioli">GitHub</a>
+          <a href="https://www.linkedin.com/in/guilherme-faccioli-b8a46611a/">LinkedIn</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Projetos</h2>
+        <div class="grid">
+          <article class="item">
+            <h3>ImobCheck</h3>
+            <p>
+              Sistema de gestão para imobiliárias para centralizar dados de proprietários,
+              imóveis, inquilinos, contratos, importações e relatórios.
+            </p>
+            <p>
+              Problema resolvido: centralizar rotinas de locação que normalmente ficam espalhadas
+              em planilhas, documentos e controles manuais.
+            </p>
+            <ul class="pill-list">
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MySQL</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>FlowLogin</h3>
+            <p>
+              Projeto full-stack de login e cadastro para praticar autenticação, validação de
+              formulários e persistência de usuários.
+            </p>
+            <p>
+              Problema resolvido: entender o fluxo completo entre formulário, API, regra de
+              validação e consulta ao banco.
+            </p>
+            <ul class="pill-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MySQL</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/GuiFaccioli/FlowLogin">Ver repositório</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experiência</h2>
+        <div class="grid">
+          <article class="item">
+            <h3>Technical Support Specialist — Hospital Israelita Albert Einstein / Escala.app</h3>
+            <p>Jul/2021 - Jan/2025</p>
+            <ul>
+              <li>Criação da Central de Ajuda, reduzindo chamados sem resolução fora do horário comercial em mais de 80%.</li>
+              <li>Aumento do nível de satisfação dos clientes com os atendimentos em mais de 90%.</li>
+              <li>Execução de testes manuais e validação de fluxos da aplicação.</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>Gerente de Locação / Preposto — Orel Imobiliária</h3>
+            <p>Jan/2015 - Jun/2021</p>
+            <ul>
+              <li>Gestão da rotina operacional do setor de locação.</li>
+              <li>Atendimento a proprietários, inquilinos e interessados.</li>
+              <li>Organização de documentos, contratos, prazos e pendências.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formação e certificações</h2>
+        <div class="grid">
+          <article class="item">
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p>Universidade Anhembi Morumbi • Jun/2025 - Jun/2028</p>
+          </article>
+          <article class="item">
+            <h3>Certificações</h3>
+            <ul>
+              <li>EF SET English Certificate — B2 Upper Intermediate</li>
+              <li>Claude 101 — Anthropic</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Competências</h2>
+        <ul class="pill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MySQL</li>
+          <li>Git</li>
+          <li>APIs REST</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
