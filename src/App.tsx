@@ -14,10 +14,6 @@ function App() {
   return (
     <div className="app-shell">
       <header className="top-nav">
-        <a className="brand" href="#top" data-track="portfolio_click" data-track-type="brand">
-          Guilherme Faccioli
-        </a>
-
         <nav className="top-nav-links" aria-label="Seções do portfólio">
           {resumeData.sections.map((section) => (
             <a
@@ -34,7 +30,7 @@ function App() {
         </nav>
 
         <div className="top-nav-actions">
-          {resumeData.links.slice(0, 3).map((link) => (
+          {resumeData.links.slice(0, 2).map((link) => (
             <a
               key={link.label}
               className={`top-nav-action top-nav-action--${link.variant}`}
@@ -60,7 +56,6 @@ function App() {
           subtitle={resumeData.subtitle}
           intro={resumeData.heroIntro}
           links={resumeData.links}
-          stats={resumeData.heroStats}
         />
 
         <SectionBlock

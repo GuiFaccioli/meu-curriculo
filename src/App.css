@@ -110,14 +110,6 @@ code {
   backdrop-filter: blur(16px);
 }
 
-.brand {
-  color: var(--color-ink);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-
 .top-nav-links,
 .top-nav-actions {
   display: flex;
@@ -221,7 +213,7 @@ main {
 }
 
 .hero-band {
-  padding: 3.2rem;
+  padding: 2.4rem;
   border-radius: 20px;
   border: 1px solid var(--color-hairline);
   background:
@@ -231,16 +223,19 @@ main {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
   gap: 2rem;
   align-items: start;
+}
+
+.hero-layout--compact {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
 }
 
 .hero-content {
   max-width: 46rem;
 }
 
-.hero-kicker,
 .section-eyebrow,
 .project-kicker {
   color: var(--color-muted);
@@ -277,8 +272,7 @@ main {
 .certification-card p,
 .certification-card span,
 .certification-card small,
-.language-list span,
-.hero-visual-profile p {
+.language-list span {
   color: var(--color-body);
 }
 
@@ -294,143 +288,6 @@ main {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1.4rem;
-}
-
-.hero-link svg {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 auto;
-}
-
-.hero-stats {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-  padding: 0;
-  margin-top: 1.5rem;
-}
-
-.hero-stat {
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.75);
-}
-
-.hero-stat strong,
-.hero-visual-profile strong {
-  display: block;
-  color: var(--color-ink);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.hero-stat span {
-  display: block;
-  margin-top: 0.35rem;
-  color: var(--color-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.hero-stat p {
-  margin-top: 0.45rem;
-  font-size: 0.92rem;
-}
-
-.hero-visual {
-  padding: 1.1rem;
-}
-
-.hero-visual-head {
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 0.8rem;
-  align-items: center;
-  padding: 0.35rem 0.2rem 1rem;
-}
-
-.hero-visual-image-wrap {
-  padding: 0.45rem;
-  border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-lg);
-  background: var(--color-canvas-soft);
-}
-
-.hero-illustration {
-  width: 100%;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-hairline);
-  background: var(--color-surface);
-}
-
-.hero-visual-label {
-  color: var(--color-muted);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.hero-visual-title {
-  margin-top: 0.35rem;
-  color: var(--color-ink);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.hero-visual-text {
-  margin-top: 0.45rem;
-  color: var(--color-body);
-  font-size: 0.94rem;
-}
-
-.hero-visual-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.7rem;
-  padding-top: 0.2rem;
-}
-
-.hero-visual-block {
-  padding: 0.9rem;
-  border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-md);
-  background: var(--color-canvas-soft);
-}
-
-.hero-visual-block strong {
-  display: block;
-  color: var(--color-ink);
-  font-size: 0.93rem;
-  font-weight: 600;
-}
-
-.hero-visual-block p {
-  margin-top: 0.35rem;
-  color: var(--color-body);
-  font-size: 0.88rem;
-}
-
-.hero-visual-pills {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.55rem;
-  padding: 0;
-  margin-top: 0.8rem;
-}
-
-.hero-visual-pills li {
-  padding: 0.85rem 0.95rem;
-  border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
-  color: var(--color-ink);
-  font-size: 0.92rem;
-  font-weight: 500;
 }
 
 .section {
@@ -763,19 +620,6 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .hero-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-visual-head {
-    grid-template-columns: 84px minmax(0, 1fr);
-  }
-
-  .hero-visual-grid,
-  .hero-visual-pills {
-    grid-template-columns: 1fr;
-  }
-
   .projects-grid,
   .skills-grid {
     grid-template-columns: 1fr;
@@ -786,11 +630,6 @@ main {
   .top-nav {
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .brand {
-    width: 100%;
-    text-align: center;
   }
 
   .top-nav-links,
@@ -836,15 +675,6 @@ main {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .hero-visual-head {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-visual-grid,
-  .hero-visual-pills {
-    grid-template-columns: 1fr;
   }
 }
 
