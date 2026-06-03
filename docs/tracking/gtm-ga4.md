@@ -21,7 +21,7 @@ Exemplos comuns:
 - O `noscript` do GTM é injetado no `body` durante a renderização do HTML pelo Vite.
 - Não existe `gtag.js` instalado diretamente no app.
 - Não existe configuração de GA4 no código do projeto.
-- Os eventos são enviados via `window.dataLayer` com `portfolio_click`, `section_toggle` e `engagement_time_checkpoint`.
+- Os eventos são enviados via `window.dataLayer` com `portfolio_click`, `section_toggle`, `section_view` e `engagement_time_checkpoint`.
 - Os cards de projeto usam `data-track="project_click"` na interface, mas são normalizados para o evento `portfolio_click` no tracker central.
 
 ## Como configurar o GA4
@@ -36,6 +36,7 @@ Crie estes triggers do tipo **Custom Event**:
 
 - `portfolio_click`
 - `section_toggle`
+- `section_view`
 - `engagement_time_checkpoint`
 
 ## Variáveis de Data Layer recomendadas
@@ -90,6 +91,14 @@ Parâmetros recomendados:
 - `page_path`
 - `visibility_state`
 
+### `section_view`
+
+Parâmetros recomendados:
+
+- `section_name`
+- `section_title`
+- `page_path`
+
 ## Dimensões personalizadas recomendadas no GA4
 
 Considere registrar dimensões personalizadas para:
@@ -127,10 +136,11 @@ Se você ativar GA4 nos dois lugares, o mesmo page view pode ser registrado duas
 
 ### 1. GTM Preview
 
-Verifique se os três eventos aparecem com o payload esperado:
+Verifique se os quatro eventos aparecem com o payload esperado:
 
 - `portfolio_click`
 - `section_toggle`
+- `section_view`
 - `engagement_time_checkpoint`
 
 ### 2. GA4 DebugView

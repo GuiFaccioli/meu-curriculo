@@ -23,6 +23,12 @@ export type SectionToggleParams = {
   page_path: string
 }
 
+export type SectionViewParams = {
+  section_name: string
+  section_title: string
+  page_path: string
+}
+
 export type EngagementCheckpointParams = {
   seconds_elapsed: number
   checkpoint: number
@@ -106,6 +112,10 @@ export function trackPortfolioClick(params: PortfolioClickParams): void {
 
 export function trackSectionToggle(params: SectionToggleParams): void {
   trackEvent('section_toggle', params)
+}
+
+export function trackSectionView(params: SectionViewParams): void {
+  trackEvent('section_view', params)
 }
 
 export function trackEngagementCheckpoint(params: EngagementCheckpointParams): void {

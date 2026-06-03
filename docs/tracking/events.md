@@ -60,7 +60,8 @@ inclusive os cards e ações de projeto marcados internamente com `data-track="p
 
 ## Evento `section_toggle`
 
-Dispara quando uma seção em accordion abre ou fecha.
+Dispara quando uma seção em accordion abre ou fecha por interação intencional.
+Não é enviado por hover visual.
 
 ### Quando dispara
 
@@ -70,6 +71,12 @@ Dispara quando uma seção em accordion abre ou fecha.
   - Competências
   - Formação e certificações
   - Contato
+
+### O que não dispara esse evento
+
+- hover que só abre visualmente a seção
+- movimentos rápidos do mouse sobre o cabeçalho
+- abertura visual sem clique ou teclado
 
 ### Payload
 
@@ -89,6 +96,33 @@ Dispara quando uma seção em accordion abre ou fecha.
 - quais seções atraem mais atenção
 - se o usuário prefere abrir por hover, clique ou teclado
 - quais blocos têm maior interesse
+
+## Evento `section_view`
+
+Dispara na primeira vez que uma seção é aberta nesta carga da página.
+Serve para medir exposição real do conteúdo, independentemente de clique ou hover.
+
+### Quando dispara
+
+- a primeira abertura de cada seção após o carregamento da página
+- apenas uma vez por seção por page load
+
+### Payload
+
+```js
+{
+  event: "section_view",
+  section_name: "projects",
+  section_title: "Projetos",
+  page_path: "/"
+}
+```
+
+### Como interpretar
+
+- ajuda a distinguir "viu o conteúdo" de "apenas passou o mouse"
+- melhora a leitura de alcance real das seções
+- útil para entender quais blocos o visitante realmente expôs
 
 ## Evento `engagement_time_checkpoint`
 

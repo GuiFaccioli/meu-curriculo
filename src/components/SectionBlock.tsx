@@ -1,5 +1,5 @@
-import { useId, useRef, useState, type ReactNode } from 'react'
-import { getPagePath, trackSectionToggle } from '../tracking/events'
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
+import { getPagePath, trackSectionToggle, trackSectionView } from '../tracking/events'
 
 type SectionBlockProps = {
   id: string
@@ -26,10 +26,10 @@ export function SectionBlock({
   const headingId = `${id}-title`
   const sectionName = trackingSectionName ?? id
   const [isOpen, setIsOpen] = useState(defaultOpen)
-  const [isPinnedOpen, setIsPinnedOpen] = useState(defaultOpen)
   const lastInteractionRef = useRef<InteractionType>('unknown')
+  const hasTrackedViewRef = useRef(defaultOpen)
 
-  const emitToggle = (toggleState: 'open' | 'closed', interactionType: InteractionType) => {
+  const emitToggle = (toggleState: 'open' | 'closed', interactionType: Exclude<InteractionType, 'unknown'>) => {
     trackSectionToggle({
       section_name: sectionName,
       section_title: title,
@@ -39,31 +39,72 @@ export function SectionBlock({
     })
   }
 
-  const openSection = (interactionType: InteractionType) => {
+  const emitView = () => {
+    if (hasTrackedViewRef.current) {
+      return
+    }
+
+    hasTrackedViewRef.current = true
+
+    trackSectionView({
+      section_name: sectionName,
+      section_title: title,
+      page_path: getPagePath(),
+    })
+  }
+
+  useEffect(() => {
+    if (!defaultOpen || hasTrackedViewRef.current) {
+      return
+    }
+
+    hasTrackedViewRef.current = true
+
+    trackSectionView({
+      section_name: sectionName,
+      section_title: title,
+      page_path: getPagePath(),
+    })
+  }, [defaultOpen, sectionName, title])
+
+  const openSection = (interactionType: InteractionType, shouldTrackToggle: boolean) => {
     if (isOpen) {
       return
     }
 
     setIsOpen(true)
-    setIsPinnedOpen(false)
-    emitToggle('open', interactionType)
+
+    emitView()
+
+    if (shouldTrackToggle && interactionType !== 'unknown') {
+      emitToggle('open', interactionType)
+    }
   }
 
   const closeSection = (interactionType: InteractionType) => {
-    if (!isOpen || isPinnedOpen) {
+    if (!isOpen) {
       return
     }
 
     setIsOpen(false)
-    emitToggle('closed', interactionType)
+
+    if (interactionType !== 'unknown') {
+      emitToggle('closed', interactionType)
+    }
   }
 
   const toggleSection = (interactionType: InteractionType) => {
     const nextOpen = !isOpen
 
     setIsOpen(nextOpen)
-    setIsPinnedOpen(nextOpen)
-    emitToggle(nextOpen ? 'open' : 'closed', interactionType)
+
+    if (nextOpen) {
+      emitView()
+    }
+
+    if (interactionType !== 'unknown') {
+      emitToggle(nextOpen ? 'open' : 'closed', interactionType)
+    }
   }
 
   return (
@@ -72,7 +113,7 @@ export function SectionBlock({
       className={`section card ${isOpen ? 'section--open' : 'section--closed'}`}
       aria-labelledby={headingId}
       data-section={sectionName}
-      onMouseEnter={() => openSection('hover')}
+      onMouseEnter={() => openSection('hover', false)}
       onMouseLeave={() => closeSection('hover')}
     >
       <div className="section-head">
@@ -88,10 +129,9 @@ export function SectionBlock({
             data-track-type="accordion"
             data-section={sectionName}
             onClick={(event) => {
-              const interactionType =
-                lastInteractionRef.current === 'keyboard' || event.detail === 0
-                  ? 'keyboard'
-                  : 'click'
+              const interactionType = lastInteractionRef.current === 'keyboard' || event.detail === 0
+                ? 'keyboard'
+                : 'click'
 
               lastInteractionRef.current = 'unknown'
               toggleSection(interactionType)
@@ -100,9 +140,6 @@ export function SectionBlock({
               if (event.key === 'Enter' || event.key === ' ') {
                 lastInteractionRef.current = 'keyboard'
               }
-            }}
-            onPointerDown={() => {
-              lastInteractionRef.current = 'click'
             }}
           >
             <span className="section-toggle-label">{title}</span>
