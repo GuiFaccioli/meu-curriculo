@@ -62,6 +62,7 @@ function App() {
           title="Projetos"
           eyebrow="Casos práticos"
           description="Cada card foi desenhado para ter ação clara, contexto suficiente e um caminho natural para tracking futuro."
+          trackingSectionName="projects"
         >
           <div className="projects-grid">
             {resumeData.projects.map((project) => (
@@ -75,6 +76,7 @@ function App() {
           title="Experiência"
           eyebrow="Trajetória profissional"
           description="A experiência em suporte técnico e operação reforça minha leitura de fluxo, atenção a detalhes e capacidade de diagnóstico."
+          trackingSectionName="experience"
         >
           <div className="stack">
             {resumeData.experiences.map((experience) => (
@@ -88,6 +90,7 @@ function App() {
           title="Competências"
           eyebrow="Base técnica"
           description="Organizei as habilidades em blocos para facilitar leitura, comparação e futura instrumentação de engajamento."
+          trackingSectionName="skills"
         >
           <div className="stack vertical-list">
             {resumeData.skills.map((group) => (
@@ -106,6 +109,7 @@ function App() {
           title="Formação e certificações"
           eyebrow="Credenciais"
           description="Formação acadêmica e certificações que reforçam consistência técnica e capacidade de aprendizado contínuo."
+          trackingSectionName="education"
         >
           <div className="stack vertical-list">
             {resumeData.education.map((education) => (
@@ -124,6 +128,7 @@ function App() {
         <SectionBlock
           id="contato"
           title="Contato"
+          trackingSectionName="contact"
         >
           <div className="contact-band card">
             <address className="contact-details">

@@ -303,29 +303,86 @@ main {
 }
 
 .section {
-  padding: 1.6rem;
+  padding: 1rem 1.2rem 1.1rem;
 }
 
 .section-head {
   display: grid;
   gap: 0.35rem;
-  margin-bottom: 1rem;
 }
 
-.section h2 {
+.section-title {
+  margin: 0;
+}
+
+.section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--color-ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.section-toggle-label {
   font-size: 1.35rem;
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -0.03em;
 }
 
+.section-toggle-indicator {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-pill);
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.section-toggle:hover .section-toggle-indicator,
+.section-toggle:focus-visible .section-toggle-indicator {
+  border-color: var(--color-hairline-strong);
+  color: var(--color-ink);
+}
+
 .section-description {
   max-width: 64ch;
   font-size: 0.97rem;
+  margin-top: 0.15rem;
+}
+
+.section-content-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 220ms ease,
+    opacity 220ms ease,
+    margin-top 220ms ease;
+  margin-top: 0;
+}
+
+.section--open .section-content-wrap {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 1rem;
 }
 
 .section-content {
+  min-height: 0;
+  overflow: hidden;
   display: grid;
   gap: 0.9rem;
 }
@@ -500,6 +557,10 @@ main {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.55rem;
+}
+
+.languages-panel {
+  padding-top: 0.1rem;
 }
 
 .skill-text-list {
@@ -711,11 +772,25 @@ main {
 
   .hero-band,
   .section {
-    padding: 1.15rem;
+    padding: 1rem;
   }
 
   .hero-band h1 {
     font-size: clamp(2.2rem, 15vw, 3.2rem);
+  }
+
+  .section-toggle {
+    gap: 0.75rem;
+  }
+
+  .section-toggle-label {
+    font-size: 1.1rem;
+  }
+
+  .section-toggle-indicator {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.95rem;
   }
 
   .hero-description,
