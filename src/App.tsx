@@ -61,7 +61,7 @@ function App() {
           id="projetos"
           title="Projetos"
           eyebrow="Casos práticos"
-          description="Cada card foi desenhado para ter ação clara, contexto suficiente e um caminho natural para tracking futuro."
+          description="Aplicações práticas desenvolvidas para consolidar minha base em front-end, back-end, APIs e organização de dados."
           trackingSectionName="projects"
         >
           <div className="projects-grid">
@@ -75,7 +75,7 @@ function App() {
           id="experiencia"
           title="Experiência"
           eyebrow="Trajetória profissional"
-          description="A experiência em suporte técnico e operação reforça minha leitura de fluxo, atenção a detalhes e capacidade de diagnóstico."
+          description="Vivência em suporte técnico, análise de problemas, atendimento a usuários e melhoria de fluxos operacionais."
           trackingSectionName="experience"
         >
           <div className="stack">
@@ -89,7 +89,7 @@ function App() {
           id="competencias"
           title="Competências"
           eyebrow="Base técnica"
-          description="Organizei as habilidades em blocos para facilitar leitura, comparação e futura instrumentação de engajamento."
+          description="Tecnologias, ferramentas e conceitos que venho aplicando em projetos práticos de desenvolvimento web."
           trackingSectionName="skills"
         >
           <div className="stack vertical-list">
@@ -108,7 +108,7 @@ function App() {
           id="formacao"
           title="Formação e certificações"
           eyebrow="Credenciais"
-          description="Formação acadêmica e certificações que reforçam consistência técnica e capacidade de aprendizado contínuo."
+          description="Formação acadêmica e certificações que complementam minha evolução técnica e profissional."
           trackingSectionName="education"
         >
           <div className="stack vertical-list">
