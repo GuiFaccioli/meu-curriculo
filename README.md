@@ -10,15 +10,17 @@ Portfólio/currículo online desenvolvido com React + TypeScript + Vite para apr
 
 ## Ambiente
 
-O projeto carrega o Google Tag Manager por variável de ambiente:
+O projeto carrega o Google Tag Manager por variável de ambiente configurada localmente
+ou na Vercel:
 
 ```env
-VITE_GTM_ID=GTM-WQS6TDQN
+VITE_GTM_ID=GTM-XXXXXXX
 ```
 
 Notas importantes:
 
 - `VITE_GTM_ID` é o ID do container do Google Tag Manager.
+- O valor real deve ficar em `.env.local` ou nas variáveis de ambiente da Vercel.
 - O Measurement ID do GA4 não fica no `.env` do projeto.
 - O GA4 é configurado dentro do GTM.
 - Não existe `gtag.js` direto no app.
