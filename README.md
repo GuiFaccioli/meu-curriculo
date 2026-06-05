@@ -2,6 +2,14 @@
 
 Portfólio/currículo online desenvolvido com React + TypeScript + Vite para apresentar perfil profissional, projetos, experiência, formação e competências de forma clara, responsiva e rastreável.
 
+## Status atual do projeto
+
+- Layout editorial responsivo com navegação por seções.
+- Seções em accordion para medir interações reais do usuário.
+- Projetos, certificados e CTAs com tracking centralizado.
+- Favicon personalizado com ícone minimalista de prancheta/currículo.
+- Integração preparada para GTM + GA4 via `dataLayer`, sem `gtag.js` direto no app.
+
 ## Deploy
 
 - **Plataforma:** Vercel
@@ -36,6 +44,21 @@ Eventos principais:
 - `section_view`
 - `engagement_time_checkpoint`
 
+O evento `portfolio_click` envia os principais parâmetros de clique:
+
+- `track_name`
+- `click_type`
+- `click_name`
+- `click_text`
+- `click_url`
+- `click_location`
+- `section_name`
+- `project_name`
+- `outbound`
+- `page_path`
+
+`click_name` espelha `click_type` e `click_location` espelha `section_name`, com fallback para `"unknown"` quando o valor base não existe.
+
 Fluxo atual:
 
 1. Usuário interage no portfólio.
@@ -60,6 +83,12 @@ Detalhes da implementação:
 ## Design e interações
 
 O portfólio foi simplificado com uma linguagem editorial mais limpa, CTAs claros e seções em accordion focadas em interação real.
+
+Atualizações visuais recentes:
+
+- Favicon substituído por uma prancheta minimalista para representar currículo.
+- Navegação superior com links rastreáveis para GitHub e LinkedIn.
+- Cards de projeto com ações rastreáveis para repositório, deploy ou contato.
 
 Detalhes da implementação:
 
