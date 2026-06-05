@@ -13,10 +13,12 @@ import {
 const CHECKPOINTS = [15, 30, 60, 120] as const
 
 function buildPortfolioClickPayload(trackable: HTMLElement) {
-  const trackName = trackable.dataset.track ?? 'unknown'
-  const clickType = trackable.dataset.trackType ?? trackName
+  const trackName = trackable.dataset.track || 'unknown'
+  const clickType = trackable.dataset.trackType || trackName
   const sectionName = trackable.dataset.section
   const projectName = trackable.dataset.projectName
+  const clickName = clickType || 'unknown'
+  const clickLocation = sectionName || 'unknown'
   const explicitLabel = normalizeTrackableText(trackable.getAttribute('aria-label'))
   const fallbackLabel = trackable.dataset.projectName ? trackable.dataset.projectName : undefined
   const clickText = normalizeTrackableText(
@@ -28,8 +30,10 @@ function buildPortfolioClickPayload(trackable: HTMLElement) {
   return {
     track_name: 'portfolio_click' as const,
     click_type: clickType,
+    click_name: clickName,
     click_text: clickText,
     click_url: clickUrl,
+    click_location: clickLocation,
     section_name: sectionName,
     project_name: projectName,
     outbound,

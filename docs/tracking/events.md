@@ -45,14 +45,20 @@ inclusive os cards e ações de projeto marcados internamente com `data-track="p
   event: "portfolio_click",
   track_name: "portfolio_click",
   click_type: "github" | "linkedin" | "section-nav" | "repository" | "certificate" | ...,
+  click_name: "github" | "linkedin" | "section-nav" | "repository" | "certificate" | "unknown" | ...,
   click_text: "Ver GitHub",
   click_url: "https://github.com/...",
+  click_location: "top-nav" | "projects" | "experience" | "skills" | "education" | "contact" | "unknown",
   section_name: "top-nav" | "projects" | "experience" | "skills" | "education" | "contact",
   project_name: "ImobCheck",
   outbound: true,
   page_path: "/"
 }
 ```
+
+`click_name` espelha `click_type` para facilitar relatórios no GA4/GTM. `click_location`
+espelha `section_name`. Quando o valor base não existe, o campo correspondente recebe
+`"unknown"`.
 
 ### Decisão que ajuda a tomar
 

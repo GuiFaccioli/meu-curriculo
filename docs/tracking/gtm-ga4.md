@@ -46,8 +46,10 @@ Crie variáveis de Data Layer para:
 
 - `track_name`
 - `click_type`
+- `click_name`
 - `click_text`
 - `click_url`
+- `click_location`
 - `section_name`
 - `section_title`
 - `toggle_state`
@@ -66,8 +68,10 @@ Crie variáveis de Data Layer para:
 Parâmetros recomendados:
 
 - `click_type`
+- `click_name` (mesmo valor de `click_type`, ou `unknown` quando ausente)
 - `click_text`
 - `click_url`
+- `click_location` (mesmo valor de `section_name`, ou `unknown` quando ausente)
 - `section_name`
 - `project_name`
 - `outbound`
@@ -105,7 +109,9 @@ Parâmetros recomendados:
 Considere registrar dimensões personalizadas para:
 
 - `click_type`
+- `click_name`
 - `click_text`
+- `click_location`
 - `section_name`
 - `section_title`
 - `toggle_state`

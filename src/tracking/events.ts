@@ -7,8 +7,10 @@ declare global {
 export type PortfolioClickParams = {
   track_name: 'portfolio_click'
   click_type: string
+  click_name: string
   click_text: string
   click_url?: string
+  click_location: string
   section_name?: string
   project_name?: string
   outbound: boolean
