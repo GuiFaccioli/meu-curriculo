@@ -15,6 +15,21 @@
   --content-width: 760px;
 }
 
+:root[data-theme='dark'] {
+  --ink: #f7f7f4;
+  --body: #c9c6bd;
+  --muted: #aaa69b;
+  --canvas: #1d1c19;
+  --surface: #282620;
+  --surface-soft: #333029;
+  --hairline: #454139;
+  --hairline-strong: #686157;
+  --accent: #ff7848;
+  --accent-dark: #ff9b76;
+  --on-accent: #1d1c19;
+  --focus: 0 0 0 3px rgba(255, 120, 72, 0.28);
+}
+
 * {
   scroll-margin-top: 5rem;
 }
@@ -27,7 +42,7 @@ body {
 }
 
 .app-shell {
-  width: min(var(--max-width), calc(100% - 2rem));
+  width: min(var(--max-width), calc(100% - 3rem));
   margin: 0 auto;
   padding: 1rem 0 3rem;
 }
@@ -44,8 +59,7 @@ body {
   padding: 0.65rem 0.8rem;
   border: 1px solid var(--hairline);
   border-radius: 12px;
-  background: rgba(247, 247, 244, 0.94);
-  backdrop-filter: blur(12px);
+  background: var(--canvas);
 }
 
 .top-nav-mark {
@@ -101,6 +115,34 @@ body {
   height: 0.9rem;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0.2rem;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.theme-toggle-option {
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.theme-toggle-option--active {
+  background: var(--ink);
+  color: var(--canvas);
+}
+
 .top-nav-link {
   padding: 0.45rem 0.65rem;
   border-radius: 6px;
@@ -130,7 +172,8 @@ main {
 }
 
 .hero-content {
-  max-width: 62rem;
+  max-width: 960px;
+  margin-inline: auto;
 }
 
 .hero-band h1 {
@@ -240,6 +283,7 @@ main {
   display: grid;
   gap: 0.35rem;
   max-width: var(--content-width);
+  margin-inline: auto;
 }
 
 .section-title {
@@ -260,7 +304,9 @@ main {
 .section-content {
   display: grid;
   gap: 1rem;
+  max-width: 960px;
   margin-top: 1.25rem;
+  margin-inline: auto;
 }
 
 .summary-copy {
@@ -443,7 +489,7 @@ button:focus-visible {
 
 @media (max-width: 700px) {
   .app-shell {
-    width: min(100% - 1rem, var(--max-width));
+    width: min(100% - 1.25rem, var(--max-width));
     padding-top: 0.5rem;
   }
 
@@ -466,6 +512,10 @@ button:focus-visible {
 
   .top-nav-social-link span {
     display: none;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
   }
 
   .top-nav-link {

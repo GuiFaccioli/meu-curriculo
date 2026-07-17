@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { EducationCard } from './components/EducationCard'
 import { ExperienceCard } from './components/ExperienceCard'
 import { HeaderHero } from './components/HeaderHero'
@@ -13,7 +14,20 @@ import './App.css'
 function App() {
   usePortfolioTracking()
 
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window === 'undefined') return 'light'
+
+    const storedTheme = window.localStorage.getItem('resume-theme')
+    if (storedTheme === 'dark' || storedTheme === 'light') return storedTheme
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  })
   const socialLinks = resumeData.links.filter((link) => link.kind === 'github' || link.kind === 'linkedin')
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    window.localStorage.setItem('resume-theme', theme)
+  }, [theme])
 
   return (
     <div className="app-shell">
@@ -55,6 +69,21 @@ function App() {
             </a>
           ))}
         </nav>
+
+        <button
+          type="button"
+          className="theme-toggle"
+          aria-label={theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'}
+          aria-pressed={theme === 'dark'}
+          onClick={() => setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))}
+        >
+          <span className={`theme-toggle-option ${theme === 'light' ? 'theme-toggle-option--active' : ''}`} aria-hidden="true">
+            ☼
+          </span>
+          <span className={`theme-toggle-option ${theme === 'dark' ? 'theme-toggle-option--active' : ''}`} aria-hidden="true">
+            ☾
+          </span>
+        </button>
       </header>
 
       <main id="top">
