@@ -131,11 +131,6 @@ function App() {
           <LanguageList items={resumeData.languages} />
         </SectionBlock>
 
-        <SectionBlock id="contato" title="Contato" trackingSectionName="contact">
-          <div className="contact-band">
-            <p>Estou aberto a oportunidades como Desenvolvedor Full Stack Jr, Front-end Jr ou Web Jr.</p>
-          </div>
-        </SectionBlock>
       </main>
 
       <footer className="site-footer">

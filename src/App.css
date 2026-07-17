@@ -281,8 +281,7 @@ main {
 .skill-category,
 .project-card,
 .experience-card,
-.education-card,
-.contact-band {
+.education-card {
   padding: 1.15rem;
   border: 1px solid var(--hairline);
   border-radius: 12px;
@@ -421,20 +420,6 @@ main {
   font-size: 0.9rem;
 }
 
-.contact-band {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  max-width: var(--content-width);
-}
-
-.contact-band p {
-  max-width: 48ch;
-  color: var(--ink);
-  font-weight: 700;
-}
-
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -506,7 +491,6 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .contact-band,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
