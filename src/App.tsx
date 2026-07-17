@@ -5,6 +5,7 @@ import { LanguageList } from './components/LanguageList'
 import { ProjectCard } from './components/ProjectCard'
 import { SectionBlock } from './components/SectionBlock'
 import { SkillCategory } from './components/SkillCategory'
+import { SocialLinkIcon } from './components/SocialLinks'
 import { resumeData } from './data/resume'
 import { usePortfolioTracking } from './tracking/usePortfolioTracking'
 import './App.css'
@@ -12,7 +13,8 @@ import './App.css'
 function App() {
   usePortfolioTracking()
 
-  const headerLinks = resumeData.links
+  const headerLinks = resumeData.links.filter((link) => link.kind === 'resume' || link.kind === 'email')
+  const socialLinks = resumeData.links.filter((link) => link.kind === 'github' || link.kind === 'linkedin')
 
   return (
     <div className="app-shell">
@@ -32,6 +34,25 @@ function App() {
               data-section={section.href.replace('#', '')}
             >
               {section.label}
+            </a>
+          ))}
+        </nav>
+
+        <nav className="top-nav-social" aria-label="Redes profissionais">
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              className="top-nav-social-link"
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={link.ariaLabel}
+              data-track="portfolio_click"
+              data-track-type={link.trackType}
+              data-section="top-nav"
+            >
+              <SocialLinkIcon kind={link.kind} />
+              <span>{link.label}</span>
             </a>
           ))}
         </nav>
