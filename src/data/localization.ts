@@ -3,9 +3,9 @@ import { resumeData, type SkillGroupData } from './resume'
 export type Locale = 'pt' | 'en' | 'es'
 
 export const localeOptions: Array<{ code: Locale; label: string; flags: string[] }> = [
-  { code: 'en', label: 'English', flags: ['🇺🇸', '🇬🇧'] },
-  { code: 'es', label: 'Español', flags: ['🇲🇽', '🇪🇸'] },
-  { code: 'pt', label: 'Português', flags: ['🇧🇷', '🇵🇹'] },
+  { code: 'en', label: 'English', flags: ['us', 'uk'] },
+  { code: 'es', label: 'Español', flags: ['mx', 'es'] },
+  { code: 'pt', label: 'Português', flags: ['br', 'pt'] },
 ]
 
 export const interfaceCopy = {

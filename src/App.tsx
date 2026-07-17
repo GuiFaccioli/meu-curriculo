@@ -95,9 +95,7 @@ function App() {
               onClick={() => setLocale(option.code)}
             >
               {option.flags.map((flag) => (
-                <span key={flag} aria-hidden="true">
-                  {flag}
-                </span>
+                <span key={flag} className={`locale-flag locale-flag--${flag}`} aria-hidden="true" />
               ))}
             </button>
           ))}
