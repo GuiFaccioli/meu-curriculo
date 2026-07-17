@@ -233,6 +233,6 @@ export const resumeData = {
   ] as Education[],
   languages: [
     { name: 'Inglês', level: 'Avançado — leitura, escrita e conversação' },
-    { name: 'Espanhol', level: 'Iniciante' },
+    { name: 'Espanhol', level: 'Intermediário — leitura, escrita e conversação' },
   ] as Language[],
 }
