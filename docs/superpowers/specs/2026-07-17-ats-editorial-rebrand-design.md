@@ -32,7 +32,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 
 ### Conteúdo
 
-- Substituir integralmente os dados antigos de `ImobCheck` e `FlowLogin` pelos projetos `Restaurante Comandas` e `TechZone Periféricos`.
+- Substituir integralmente os dados antigos de `ImobCheck` e `FlowLogin` pelo projeto `Restaurante Comandas`.
 - Atualizar o cargo-alvo para: `Desenvolvedor Full Stack Jr | TypeScript | React | Next.js | Node.js | PostgreSQL | Engenharia de Software com IA`.
 - Atualizar formação, contatos, experiência no Einstein/Escala.app, competências e idiomas com o conteúdo fornecido pelo usuário.
 - Manter resultados mensuráveis da experiência, especialmente redução de chamados em mais de 80% e satisfação superior a 90%.

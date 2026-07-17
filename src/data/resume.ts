@@ -173,19 +173,6 @@ export const resumeData = {
       ],
     },
     {
-      title: 'Analytics',
-      items: [
-        'Google Tag Manager',
-        'Google Analytics 4',
-        'Google APIs',
-        'window.dataLayer',
-        'Eventos de e-commerce',
-        'transaction_id',
-        'item_variant',
-        'Tracking de produtos, carrinho, checkout e compra',
-      ],
-    },
-    {
       title: 'Engenharia de software assistida por IA',
       items: [
         'Engenharia de contexto',
@@ -237,31 +224,6 @@ export const resumeData = {
         'Atualizações de pedidos com Server-Sent Events, Socket.IO e polling.',
         'Regras para comandas, cancelamento de itens, totais e preservação de preço histórico.',
         'Testes unitários, de integração e end-to-end.',
-      ],
-    },
-    {
-      name: 'TechZone Periféricos',
-      description:
-        'E-commerce demonstrativo de periféricos gamer com catálogo, variações, favoritos, carrinho, checkout simulado e rastreamento de eventos de e-commerce.',
-      technologies: [
-        'React',
-        'TypeScript',
-        'Vite',
-        'Node.js',
-        'APIs Serverless',
-        'Cookies HTTP-only',
-        'Google Tag Manager',
-        'Google Analytics 4',
-        'Vercel',
-      ],
-      highlights: [
-        'Catálogo de produtos por categorias com busca, filtros e navegação.',
-        'Seleção de variações de produtos, favoritos e carrinho de compras.',
-        'Persistência de carrinho e favoritos com cookies HTTP-only.',
-        'Fluxo de checkout e simulação de compra.',
-        'API Serverless para operações da aplicação.',
-        'Eventos de visualização, adição ao carrinho, checkout e compra no window.dataLayer.',
-        'Uso de transaction_id e item_variant para tracking de e-commerce.',
       ],
     },
   ] as Project[],

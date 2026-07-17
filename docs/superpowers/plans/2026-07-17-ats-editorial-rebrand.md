@@ -37,11 +37,11 @@ Manter tipos explícitos e adicionar apenas campos necessários para o currícul
 
 - [ ] **Step 2: Substituir o conteúdo antigo**
 
-Remover `ImobCheck` e `FlowLogin`. Inserir `Restaurante Comandas` e `TechZone Periféricos` com as tecnologias e responsabilidades fornecidas pelo usuário. Atualizar o título, resumo, experiência no Einstein/Escala.app, formação na Universidade Anhembi Morumbi e idiomas.
+Remover `ImobCheck`, `FlowLogin` e o projeto antigo de catálogo. Manter `Restaurante Comandas` com as tecnologias e responsabilidades fornecidas pelo usuário. Atualizar o título, resumo, experiência no Einstein/Escala.app, formação na Universidade Anhembi Morumbi e idiomas.
 
 - [ ] **Step 3: Reorganizar palavras-chave por domínio**
 
-Separar competências em Front-end, Back-end e arquitetura, Bancos de dados e ORMs, Testes e qualidade, Analytics e Engenharia de software assistida por IA. Manter termos como TypeScript, React, Next.js, Node.js, PostgreSQL, Prisma, Drizzle, Vitest, Playwright, TDD e Git.
+Separar competências em Front-end, Back-end e arquitetura, Bancos de dados e ORMs, Testes e qualidade e Engenharia de software assistida por IA. Manter termos como TypeScript, React, Next.js, Node.js, PostgreSQL, Prisma, Drizzle, Vitest, Playwright, TDD e Git.
 
 - [ ] **Step 4: Validar referências de conteúdo**
 
