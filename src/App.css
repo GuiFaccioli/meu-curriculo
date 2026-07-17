@@ -127,6 +127,44 @@ body {
   cursor: pointer;
 }
 
+.locale-switcher {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.locale-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.02rem;
+  min-width: 2.65rem;
+  justify-content: center;
+  padding: 0.25rem 0.35rem;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.locale-option:hover,
+.locale-option:focus-visible {
+  background: var(--surface-soft);
+  color: var(--ink);
+}
+
+.locale-option--active {
+  background: var(--ink);
+  color: var(--canvas);
+}
+
 .theme-toggle-option {
   display: inline-grid;
   place-items: center;
@@ -515,6 +553,10 @@ button:focus-visible {
   }
 
   .theme-toggle {
+    margin-left: auto;
+  }
+
+  .locale-switcher {
     margin-left: auto;
   }
 
