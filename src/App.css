@@ -1,16 +1,16 @@
 :root {
-  --ink: #20231f;
-  --body: #4d554f;
-  --muted: #69726b;
-  --canvas: #f5f6f2;
+  --ink: #26251e;
+  --body: #5a5852;
+  --muted: #807d72;
+  --canvas: #f7f7f4;
   --surface: #ffffff;
-  --surface-soft: #eef1eb;
-  --hairline: #dce2da;
-  --hairline-strong: #b9c5b9;
-  --accent: #d94e26;
-  --accent-dark: #a93618;
+  --surface-soft: #fafaf7;
+  --hairline: #e6e5e0;
+  --hairline-strong: #cfcdc4;
+  --accent: #f54e00;
+  --accent-dark: #d04200;
   --on-accent: #ffffff;
-  --focus: 0 0 0 4px rgba(217, 78, 38, 0.2);
+  --focus: 0 0 0 3px rgba(245, 78, 0, 0.18);
   --max-width: 1080px;
   --content-width: 760px;
 }
@@ -44,7 +44,7 @@ body {
   padding: 0.65rem 0.8rem;
   border: 1px solid var(--hairline);
   border-radius: 12px;
-  background: rgba(245, 246, 242, 0.94);
+  background: rgba(247, 247, 244, 0.94);
   backdrop-filter: blur(12px);
 }
 
@@ -90,56 +90,32 @@ main {
 }
 
 .hero-band {
-  position: relative;
-  overflow: hidden;
   padding: clamp(2rem, 6vw, 4.75rem);
   border: 1px solid var(--hairline);
   border-radius: 16px;
-  background: var(--ink);
-  color: var(--canvas);
-}
-
-.hero-band::after {
-  position: absolute;
-  right: clamp(1.5rem, 8vw, 7rem);
-  bottom: -3.25rem;
-  width: 10rem;
-  height: 10rem;
-  border: 1px solid rgba(245, 246, 242, 0.18);
-  border-radius: 50%;
-  content: '';
+  background: var(--canvas);
+  color: var(--ink);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
   max-width: 62rem;
-}
-
-.hero-kicker,
-.project-kicker {
-  color: #f39b7d;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
 }
 
 .hero-band h1 {
   max-width: 15ch;
   margin-top: 0.7rem;
-  color: var(--canvas);
+  color: var(--ink);
   font-size: clamp(2.6rem, 8vw, 5.8rem);
-  font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
   text-wrap: balance;
 }
 
 .hero-title {
   max-width: 56rem;
   margin-top: 1.2rem;
-  color: #d6ded5;
+  color: var(--ink);
   font-size: clamp(1rem, 2vw, 1.28rem);
   font-weight: 600;
   line-height: 1.45;
@@ -150,15 +126,15 @@ main {
   flex-wrap: wrap;
   gap: 0.35rem 1.1rem;
   margin-top: 1.5rem;
-  color: #aebbae;
+  color: var(--body);
   font-size: 0.9rem;
   font-style: normal;
 }
 
 .hero-contact a {
-  color: var(--canvas);
+  color: var(--ink);
   text-decoration: underline;
-  text-decoration-color: rgba(245, 246, 242, 0.35);
+  text-decoration-color: var(--hairline-strong);
   text-underline-offset: 0.2em;
 }
 
@@ -182,7 +158,7 @@ main {
   min-height: 2.6rem;
   padding: 0.65rem 0.9rem;
   border: 1px solid transparent;
-  border-radius: 7px;
+  border-radius: 8px;
   font-size: 0.82rem;
   font-weight: 800;
   line-height: 1;
@@ -218,18 +194,18 @@ main {
 }
 
 .hero-link--secondary {
-  border-color: rgba(245, 246, 242, 0.35);
-  background: transparent;
-  color: var(--canvas);
+  border-color: var(--hairline-strong);
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .hero-link--secondary:hover {
-  border-color: var(--canvas);
-  background: rgba(245, 246, 242, 0.08);
+  border-color: var(--ink);
+  background: var(--surface);
 }
 
 .section {
-  padding: clamp(1.3rem, 3vw, 2.2rem);
+  padding: clamp(2.2rem, 5vw, 5rem) 0 0;
   border-top: 1px solid var(--hairline-strong);
 }
 
@@ -268,10 +244,6 @@ main {
 }
 
 .summary-copy strong,
-.project-problem strong {
-  color: var(--ink);
-}
-
 .skills-grid,
 .projects-grid {
   display: grid;
@@ -288,6 +260,13 @@ main {
   border: 1px solid var(--hairline);
   border-radius: 12px;
   background: var(--surface);
+}
+
+.skill-category {
+  padding: 1rem 0;
+  border-width: 1px 0 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .skill-category h3,
@@ -312,7 +291,7 @@ main {
 .skill-text-item,
 .project-tech-item {
   color: var(--body);
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.73rem;
   line-height: 1.45;
 }
@@ -341,19 +320,12 @@ main {
 }
 
 .project-description,
-.project-problem,
 .experience-company,
 .education-card p,
 .education-card span,
 .language-list span {
   color: var(--body);
   font-size: 0.92rem;
-}
-
-.project-problem {
-  padding: 0.8rem 0.9rem;
-  border-radius: 7px;
-  background: var(--surface-soft);
 }
 
 .project-highlights,
@@ -391,7 +363,7 @@ main {
 .experience-top span,
 .education-card span {
   color: var(--muted);
-  font-family: 'DM Mono', monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
 }
 
@@ -413,7 +385,7 @@ main {
   gap: 0.5rem;
   padding: 0.55rem 0.7rem;
   border: 1px solid var(--hairline);
-  border-radius: 7px;
+  border-radius: 8px;
   background: var(--surface);
 }
 

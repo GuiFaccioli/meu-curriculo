@@ -18,7 +18,6 @@ export type SkillGroupData = {
 export type Project = {
   name: string
   description: string
-  problem: string
   technologies: string[]
   highlights: string[]
   repoUrl?: string
@@ -51,9 +50,7 @@ export const resumeData = {
   phone: '(11) 95269-5934',
   email: 'guifacciolic@gmail.com',
   summary:
-    'Desenvolvedor Full Stack Júnior em transição de carreira para desenvolvimento de software, cursando Análise e Desenvolvimento de Sistemas e com experiência prática na criação de aplicações web com TypeScript, JavaScript, React, Next.js, Node.js e bancos de dados relacionais.',
-  summaryDetails:
-    'Experiência no desenvolvimento de interfaces responsivas, APIs, autenticação, autorização, controle de permissões, arquitetura multi-tenant, modelagem de dados, testes automatizados e publicação de aplicações. Atuação anterior em suporte técnico a produto digital no Hospital Israelita Albert Einstein, realizando atendimento a usuários, análise de problemas, reprodução de erros, testes de funcionalidades, identificação de bugs, acompanhamento de métricas e colaboração com equipes de produto e desenvolvimento.',
+    'Desenvolvedor Full Stack Júnior em transição de carreira para desenvolvimento de software, cursando Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web responsivas e APIs, com experiência em autenticação, autorização, controle de permissões, arquitetura multi-tenant, modelagem relacional e testes automatizados. Minha experiência anterior em suporte técnico fortaleceu minha capacidade de investigar problemas, validar fluxos e transformar necessidades de usuários em melhorias de produto.',
   aiSummary:
     'Utilizo inteligência artificial como apoio estruturado ao processo de engenharia de software, incluindo engenharia de contexto, desenvolvimento orientado por especificações, agentes especializados, automação de workflows, revisão crítica de código e validação por testes e evidências.',
   links: [
@@ -213,9 +210,8 @@ export const resumeData = {
   projects: [
     {
       name: 'Restaurante Comandas',
-      description: 'Sistema full stack de gestão operacional para restaurantes e pizzarias.',
-      problem:
-        'Organizar operações de restaurantes em fluxos integrados para diferentes perfis de usuário, com atualização de pedidos e regras de negócio consistentes.',
+      description:
+        'Sistema full stack de gestão operacional para restaurantes e pizzarias, com fluxos multi-tenant para usuários, mesas, produtos, pedidos, pagamentos e relatórios.',
       technologies: [
         'TypeScript',
         'React',
@@ -245,9 +241,8 @@ export const resumeData = {
     },
     {
       name: 'TechZone Periféricos',
-      description: 'E-commerce demonstrativo de periféricos gamer e acessórios para computador.',
-      problem:
-        'Construir uma jornada de compra completa, com catálogo, variações, carrinho, checkout simulado e rastreamento de eventos de e-commerce.',
+      description:
+        'E-commerce demonstrativo de periféricos gamer com catálogo, variações, favoritos, carrinho, checkout simulado e rastreamento de eventos de e-commerce.',
       technologies: [
         'React',
         'TypeScript',

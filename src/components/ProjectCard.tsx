@@ -19,15 +19,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className="project-card-head">
         <div>
-          <p className="project-kicker">Projeto relevante</p>
           <h3>{project.name}</h3>
         </div>
       </div>
 
       <p className="project-description">{project.description}</p>
-      <p className="project-problem">
-        <strong>Contexto:</strong> {project.problem}
-      </p>
 
       <div className="project-tech-list" aria-label={`Tecnologias de ${project.name}`}>
         {project.technologies.map((tech) => (

@@ -50,12 +50,10 @@ function App() {
         <SectionBlock
           id="resumo"
           title="Resumo profissional"
-          description="Desenvolvimento full stack com foco em aplicações web funcionais, seguras, responsivas e orientadas às necessidades dos usuários."
           trackingSectionName="summary"
         >
           <div className="summary-copy">
             <p>{resumeData.summary}</p>
-            <p>{resumeData.summaryDetails}</p>
             <p>
               <strong>Engenharia de software assistida por IA:</strong> {resumeData.aiSummary}
             </p>
@@ -65,7 +63,6 @@ function App() {
         <SectionBlock
           id="competencias"
           title="Competências técnicas"
-          description="Tecnologias, práticas e conceitos aplicados em projetos full stack e na evolução de produtos digitais."
           trackingSectionName="skills"
         >
           <div className="skills-grid">
@@ -78,7 +75,6 @@ function App() {
         <SectionBlock
           id="experiencia"
           title="Experiência profissional"
-          description="Experiência em suporte técnico, análise de problemas, validação de produto e melhoria de fluxos operacionais."
           trackingSectionName="experience"
         >
           <div className="stack">
@@ -91,7 +87,6 @@ function App() {
         <SectionBlock
           id="projetos"
           title="Projetos relevantes"
-          description="Aplicações práticas que demonstram domínio de front-end, back-end, dados, regras de negócio e qualidade de software."
           trackingSectionName="projects"
         >
           <div className="projects-grid">
@@ -104,7 +99,6 @@ function App() {
         <SectionBlock
           id="formacao"
           title="Formação acadêmica"
-          description="Formação em andamento e desenvolvimento contínuo da base de engenharia de software."
           trackingSectionName="education"
         >
           <div className="stack">
