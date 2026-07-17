@@ -11,7 +11,7 @@ export function HeaderHero({ name, title, location, phone, email }: HeaderHeroPr
     <header className="hero-band">
       <div className="hero-layout">
         <div className="hero-content">
-          <p className="hero-kicker">Currículo profissional</p>
+          
           <h1>{name}</h1>
           <p className="hero-title">{title}</p>
 
