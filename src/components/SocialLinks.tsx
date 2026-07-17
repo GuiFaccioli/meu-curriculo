@@ -28,17 +28,6 @@ export function SocialLinkIcon({ kind }: { kind: ResumeLink['kind'] }) {
     )
   }
 
-  if (kind === 'resume') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="social-icon">
-        <path
-          fill="currentColor"
-          d="M7 3.75A2.75 2.75 0 0 1 9.75 1h4.5A2.75 2.75 0 0 1 17 3.75v16.5A2.75 2.75 0 0 1 14.25 23h-4.5A2.75 2.75 0 0 1 7 20.25V3.75Zm2 0v16.5c0 .41.34.75.75.75h4.5c.41 0 .75-.34.75-.75V3.75A.75.75 0 0 0 14.25 3h-4.5a.75.75 0 0 0-.75.75ZM10 6h4v2h-4V6Zm0 4h4v2h-4v-2Zm0 4h4v2h-4v-2Z"
-        />
-      </svg>
-    )
-  }
-
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="social-icon">
       <path
@@ -65,7 +54,6 @@ export function SocialLinks({ links, section = 'hero' }: SocialLinksProps) {
             href={link.href}
             target={target}
             rel={rel}
-            download={link.download}
             aria-label={link.ariaLabel}
             data-track="portfolio_click"
             data-track-type={link.trackType}

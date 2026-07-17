@@ -5,10 +5,7 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const fallbackMailTo = `mailto:guifacciolic@gmail.com?subject=${encodeURIComponent(
-    `Quero saber mais sobre ${project.name}`,
-  )}`
-  const hasPrimaryAction = Boolean(project.deployUrl || project.repoUrl)
+  const hasProjectActions = Boolean(project.deployUrl || project.repoUrl)
 
   return (
     <article
@@ -39,8 +36,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </ul>
 
-      <div className="project-card-actions" aria-label={`Ações do projeto ${project.name}`}>
-        {project.deployUrl ? (
+      {hasProjectActions ? (
+        <div className="project-card-actions" aria-label={`Ações do projeto ${project.name}`}>
+          {project.deployUrl ? (
           <a
             className="button button-primary"
             href={project.deployUrl}
@@ -52,9 +50,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           >
             Abrir projeto
           </a>
-        ) : null}
+          ) : null}
 
-        {project.repoUrl ? (
+          {project.repoUrl ? (
           <a
             className="button button-secondary"
             href={project.repoUrl}
@@ -66,20 +64,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           >
             Ver repositório
           </a>
-        ) : null}
-
-        {!hasPrimaryAction ? (
-          <a
-            className="button button-secondary"
-            href={fallbackMailTo}
-            data-track="project_click"
-            data-track-type="project-contact"
-            data-project-name={project.name}
-          >
-            Solicitar acesso
-          </a>
-        ) : null}
-      </div>
+          ) : null}
+        </div>
+      ) : null}
     </article>
   )
 }

@@ -220,11 +220,6 @@ main {
   color: var(--ink);
 }
 
-.hero-link--download {
-  background: var(--canvas);
-  color: var(--ink);
-}
-
 .hero-link--secondary {
   border-color: var(--hairline-strong);
   background: var(--surface);

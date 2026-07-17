@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Transformar o site do currículo de Guilherme Faccioli em uma experiência digital orientada à contratação, com conteúdo atualizado, estrutura rastreável por ATS e uma identidade editorial profissional. O site e o currículo HTML baixável devem compartilhar a mesma fonte de verdade textual.
+Transformar o site do currículo de Guilherme Faccioli em uma experiência digital orientada à contratação, com conteúdo atualizado, estrutura rastreável por ATS e uma identidade editorial profissional. O site e o currículo HTML devem compartilhar a mesma fonte de verdade textual.
 
 ## Público e prioridade
 
@@ -28,7 +28,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 5. Projetos relevantes.
 6. Formação acadêmica.
 7. Idiomas.
-8. CTA final de contato e download.
+8. Contato profissional visível, sem CTA de envio de e-mail ou download.
 
 ### Conteúdo
 
@@ -42,7 +42,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 ## Arquitetura de conteúdo
 
 - `src/data/resume.ts` continua sendo a fonte tipada da página principal.
-- Criar uma representação reutilizável ou uma composição equivalente para o currículo HTML em `public/curriculo-guilherme-faccioli.html`, evitando divergência textual entre a página e o download.
+- Manter uma composição equivalente para o currículo HTML em `public/curriculo-guilherme-faccioli.html`, evitando divergência textual entre a página e o documento imprimível.
 - Preservar os atributos `data-track`, `data-track-type`, `data-section` e `data-project-name` já usados pelo tracking.
 - Não alterar a arquitetura de tracking GTM/GA4 sem necessidade.
 
@@ -52,7 +52,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 
 - Container centralizado com largura confortável para leitura.
 - Uma coluna em desktop e mobile; projetos podem usar agrupamento visual, mas sem depender de uma grade para transmitir informação.
-- Navegação superior simples, com links de seção e ações de GitHub, LinkedIn e download.
+- Navegação superior simples, com links de seção e ações de GitHub e LinkedIn.
 - Todas as seções ficam disponíveis no documento inicial; não usar accordion para conteúdo essencial.
 
 ### Tipografia
@@ -74,7 +74,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 - Links e botões com foco visível, hover discreto e alvos adequados para toque.
 - Respeitar `prefers-reduced-motion`.
 - Navegação com âncoras deve permanecer funcional em teclado e mobile.
-- Download, LinkedIn, GitHub e e-mail devem ter rótulos claros e acessíveis.
+- LinkedIn e GitHub devem ter rótulos claros e acessíveis; telefone e e-mail aparecem como dados, sem botões de ação.
 
 ## Componentes afetados
 
@@ -84,7 +84,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 - `src/data/resume.ts`: substituir o conteúdo antigo pela versão atualizada.
 - `App.css` e `index.css`: implementar tokens, layout, tipografia, responsividade e estados do novo sistema.
 - Componentes de experiência, skills, formação, idiomas e links: ajustar apenas quando necessário para suportar a nova hierarquia.
-- `public/curriculo-guilherme-faccioli.html`: sincronizar o conteúdo e a estrutura ATS do currículo baixável.
+- `public/curriculo-guilherme-faccioli.html`: sincronizar o conteúdo e a estrutura ATS do documento imprimível.
 
 ## Acessibilidade e qualidade
 
@@ -104,7 +104,7 @@ O design deve ser memorável por sua organização e qualidade tipográfica, nã
 ## Critérios de aceite
 
 - A página apresenta apenas o conteúdo profissional atualizado e não contém os projetos antigos.
-- O currículo HTML baixável está alinhado ao conteúdo principal.
+- O currículo HTML está alinhado ao conteúdo principal.
 - Recrutadores conseguem localizar cargo-alvo, resumo, stack, experiência, projetos, formação e contato sem abrir accordions.
 - O layout é legível em mobile e desktop, sem overflow horizontal.
 - A página preserva o tracking existente e passa em lint/build.

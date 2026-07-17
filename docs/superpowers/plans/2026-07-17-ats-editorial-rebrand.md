@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Atualizar o currículo digital e o HTML baixável para uma experiência ATS Editorial, orientada a recrutadores de tecnologia.
+**Goal:** Atualizar o currículo digital e o HTML imprimível para uma experiência ATS Editorial, orientada a recrutadores de tecnologia.
 
 **Architecture:** `src/data/resume.ts` permanece como fonte tipada do conteúdo da aplicação. A página React será reorganizada em uma leitura linear, sem esconder conteúdo essencial, enquanto `public/curriculo-guilherme-faccioli.html` receberá a mesma hierarquia textual e os mesmos dados profissionais em formato imprimível.
 
@@ -63,7 +63,7 @@ Executar `rg "ImobCheck|FlowLogin|MySQL" src/data/resume.ts` e confirmar que nen
 
 - [ ] **Step 1: Tornar o cabeçalho completo**
 
-Renderizar nome, cargo-alvo, localização, telefone, e-mail, LinkedIn, GitHub e ação de download em HTML semântico. O nome deve ser o único `h1` da página.
+Renderizar nome, cargo-alvo, localização, telefone, e-mail, LinkedIn e GitHub em HTML semântico. O nome deve ser o único `h1` da página.
 
 - [ ] **Step 2: Adicionar a seção de resumo profissional**
 
@@ -115,7 +115,7 @@ Validar navegação, contatos, listas de tecnologias e projetos em 320px, 768px 
 
 Garantir `:focus-visible`, hover discreto, áreas de toque adequadas e alternativa de movimento via `prefers-reduced-motion: reduce`.
 
-### Task 4: Atualizar o currículo HTML baixável
+### Task 4: Atualizar o currículo HTML imprimível
 
 **Files:**
 - Modify: `public/curriculo-guilherme-faccioli.html`
@@ -164,18 +164,18 @@ Rodar `npm run build`. Resultado esperado: TypeScript e Vite concluídos sem err
 
 - [ ] **Step 4: Fazer inspeção visual**
 
-Rodar o servidor Vite e verificar a página em 320px, 768px e desktop, conferindo overflow, ordem das seções, foco por teclado, links e download.
+Rodar o servidor Vite e verificar a página em 320px, 768px e desktop, conferindo overflow, ordem das seções e foco por teclado.
 
 - [ ] **Step 5: Fazer revisão final de conteúdo**
 
-Confirmar que o site e o currículo baixável não contêm os projetos antigos, não escondem conteúdo essencial e usam exatamente os dados fornecidos pelo usuário.
+Confirmar que o site e o currículo HTML não contêm os projetos antigos, não escondem conteúdo essencial e usam exatamente os dados fornecidos pelo usuário.
 
 ## Estratégia de commits
 
-Não criar commits automaticamente porque o diretório atual não possui `.git`. Se o repositório for restaurado, separar em commits convencionais por unidade: `feat: update resume content`, `feat: apply ats editorial redesign`, `docs: sync downloadable resume`.
+Não criar commits automaticamente porque o diretório atual não possui `.git`. Se o repositório for restaurado, separar em commits convencionais por unidade: `feat: update resume content`, `feat: apply ats editorial redesign`, `docs: sync printable resume`.
 
 ## Self-review
 
-- Cobertura: conteúdo, estrutura ATS, sistema visual, currículo baixável, acessibilidade, tracking e validação estão cobertos nas cinco tarefas.
+- Cobertura: conteúdo, estrutura ATS, sistema visual, currículo HTML, acessibilidade, tracking e validação estão cobertos nas cinco tarefas.
 - Placeholders: não há `TODO`, `TBD` ou instruções vagas de implementação.
-- Consistência: `resumeData` é a fonte tipada; componentes e HTML baixável consomem/espelham o mesmo conteúdo; as tarefas seguem a ordem de dependência.
+- Consistência: `resumeData` é a fonte tipada; componentes e HTML imprimível consomem/espelham o mesmo conteúdo; as tarefas seguem a ordem de dependência.

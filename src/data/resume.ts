@@ -1,10 +1,9 @@
 export type ResumeLink = {
   label: string
   href: string
-  kind: 'github' | 'linkedin' | 'email' | 'resume'
-  variant: 'primary' | 'secondary' | 'download' | 'ghost'
+  kind: 'github' | 'linkedin'
+  variant: 'secondary'
   external?: boolean
-  download?: boolean
   trackType: string
   section?: string
   ariaLabel?: string
@@ -73,25 +72,6 @@ export const resumeData = {
       trackType: 'linkedin',
       section: 'header',
       ariaLabel: 'Abrir o LinkedIn de Guilherme Faccioli em nova aba',
-    },
-    {
-      label: 'Baixar currículo',
-      href: '/curriculo-guilherme-faccioli.html',
-      kind: 'resume',
-      variant: 'download',
-      download: true,
-      trackType: 'resume',
-      section: 'header',
-      ariaLabel: 'Baixar o currículo de Guilherme Faccioli',
-    },
-    {
-      label: 'Enviar e-mail',
-      href: 'mailto:guifacciolic@gmail.com',
-      kind: 'email',
-      variant: 'primary',
-      trackType: 'contact',
-      section: 'contact',
-      ariaLabel: 'Enviar e-mail para Guilherme Faccioli',
     },
   ] as ResumeLink[],
   sections: [

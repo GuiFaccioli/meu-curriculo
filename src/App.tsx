@@ -13,7 +13,6 @@ import './App.css'
 function App() {
   usePortfolioTracking()
 
-  const headerLinks = resumeData.links.filter((link) => link.kind === 'resume' || link.kind === 'email')
   const socialLinks = resumeData.links.filter((link) => link.kind === 'github' || link.kind === 'linkedin')
 
   return (
@@ -65,7 +64,6 @@ function App() {
           location={resumeData.location}
           phone={resumeData.phone}
           email={resumeData.email}
-          links={headerLinks}
         />
 
         <SectionBlock
@@ -136,15 +134,6 @@ function App() {
         <SectionBlock id="contato" title="Contato" trackingSectionName="contact">
           <div className="contact-band">
             <p>Estou aberto a oportunidades como Desenvolvedor Full Stack Jr, Front-end Jr ou Web Jr.</p>
-            <a
-              className="button button-primary"
-              href={`mailto:${resumeData.email}`}
-              data-track="portfolio_click"
-              data-track-type="contact"
-              data-section="contact"
-            >
-              Entrar em contato
-            </a>
           </div>
         </SectionBlock>
       </main>
