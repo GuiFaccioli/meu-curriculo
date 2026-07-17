@@ -94,9 +94,7 @@ function App() {
               aria-pressed={locale === option.code}
               onClick={() => setLocale(option.code)}
             >
-              {option.flags.map((flag) => (
-                <span key={flag} className={`locale-flag locale-flag--${flag}`} aria-hidden="true" />
-              ))}
+              <img className="locale-flag" src={option.icon} alt="" aria-hidden="true" />
             </button>
           ))}
         </div>

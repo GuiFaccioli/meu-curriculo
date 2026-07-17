@@ -2,10 +2,10 @@ import { resumeData, type SkillGroupData } from './resume'
 
 export type Locale = 'pt' | 'en' | 'es'
 
-export const localeOptions: Array<{ code: Locale; label: string; flags: string[] }> = [
-  { code: 'en', label: 'English', flags: ['us', 'uk'] },
-  { code: 'es', label: 'Español', flags: ['mx', 'es'] },
-  { code: 'pt', label: 'Português', flags: ['br', 'pt'] },
+export const localeOptions: Array<{ code: Locale; label: string; icon: string }> = [
+  { code: 'en', label: 'English', icon: '/flags/language-en.png' },
+  { code: 'es', label: 'Español', icon: '/flags/language-es.png' },
+  { code: 'pt', label: 'Português', icon: '/flags/language-pt.png' },
 ]
 
 export const interfaceCopy = {
