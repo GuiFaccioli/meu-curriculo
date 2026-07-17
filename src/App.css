@@ -184,6 +184,9 @@ body {
     linear-gradient(0deg, transparent 38%, #fff 38% 62%, transparent 62%),
     linear-gradient(90deg, transparent 47%, #c8102e 47% 53%, transparent 53%),
     linear-gradient(0deg, transparent 43%, #c8102e 43% 57%, transparent 57%), #012169;
+  background-image: url('/flags/english-language-flag.png');
+  background-position: center;
+  background-size: cover;
 }
 
 .locale-flag--mx {
@@ -585,9 +588,21 @@ main {
   font-size: 0.82rem;
 }
 
+.site-footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .site-footer a {
   color: var(--ink);
   font-weight: 800;
+}
+
+.icon-credit {
+  color: var(--muted) !important;
+  font-size: 0.7rem;
+  font-weight: 500 !important;
 }
 
 a:focus-visible,
@@ -657,6 +672,12 @@ button:focus-visible {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .site-footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 }
 
