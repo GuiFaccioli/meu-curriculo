@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Currículo de Guilherme Faccioli Crescencio, Desenvolvedor Full Stack Júnior." />
+    <title>Currículo — Guilherme Faccioli Crescencio</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #20231f;
+        --body: #4d554f;
+        --muted: #69726b;
+        --canvas: #f5f6f2;
+        --surface: #ffffff;
+        --surface-soft: #eef1eb;
+        --hairline: #dce2da;
+        --accent: #a93618;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--body);
+        font: 400 15px/1.6 Arial, Helvetica, sans-serif;
+      }
+      main { max-width: 960px; margin: 0 auto; padding: 40px 24px 56px; }
+      header, section {
+        margin-bottom: 16px;
+        padding: 28px;
+        border: 1px solid var(--hairline);
+        border-radius: 12px;
+        background: var(--surface);
+      }
+      h1, h2, h3, p, ul { margin: 0; }
+      h1, h2, h3 { color: var(--ink); line-height: 1.2; }
+      h1 { max-width: 15ch; font-size: 42px; letter-spacing: -0.05em; }
+      h2 { margin-bottom: 8px; font-size: 22px; letter-spacing: -0.03em; }
+      h3 { font-size: 16px; }
+      .kicker { color: var(--accent); font: 500 12px/1.4 Consolas, monospace; }
+      .title { margin-top: 12px; color: var(--ink); font-size: 18px; font-weight: 700; line-height: 1.4; }
+      .contact { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 16px; font-style: normal; }
+      .contact a { color: var(--accent); font-weight: 700; }
+      .summary { display: grid; gap: 12px; max-width: 75ch; }
+      .section-description { margin-bottom: 16px; color: var(--muted); }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .item { padding: 16px; border: 1px solid var(--hairline); border-radius: 8px; background: var(--surface); }
+      .item p { margin-top: 8px; }
+      .item ul { margin-top: 10px; }
+      .item li + li { margin-top: 5px; }
+      .tech-list { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 12px 0 0; list-style: none; }
+      .tech-list li { padding: 3px 6px; border-radius: 4px; background: var(--surface-soft); color: var(--ink); font: 400 12px/1.4 Consolas, monospace; }
+      .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+      .links a { color: var(--accent); font-weight: 700; }
+      .skill-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0; list-style: none; }
+      .skill-list li { padding: 12px; border-top: 1px solid var(--hairline); }
+      .skill-list strong { display: block; color: var(--ink); }
+      .skill-list span { display: block; margin-top: 4px; }
+      .languages { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-left: 20px; }
+      @media (max-width: 700px) {
+        main { padding: 16px 12px 32px; }
+        header, section { padding: 20px; }
+        h1 { font-size: 36px; }
+        .grid, .skill-list { grid-template-columns: 1fr; }
+      }
+      @media print {
+        body { background: #fff; }
+        main { max-width: none; padding: 0; }
+        header, section, .item { break-inside: avoid; }
+        header, section { border: 0; padding: 16px 0; }
+        .links a { color: var(--ink); }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="kicker">Currículo profissional</p>
+        <h1>Guilherme Faccioli Crescencio</h1>
+        <p class="title">Desenvolvedor Full Stack Jr | TypeScript | React | Next.js | Node.js | PostgreSQL | Engenharia de Software com IA</p>
+        <address class="contact">
+          <span>São Paulo, SP</span>
+          <a href="tel:11952695934">(11) 95269-5934</a>
+          <a href="mailto:guifacciolic@gmail.com">guifacciolic@gmail.com</a>
+          <a href="https://linkedin.com/in/guilherme-faccioli-b8a46611a">LinkedIn</a>
+          <a href="https://github.com/GuiFaccioli">GitHub</a>
+          <a href="https://guilherme-faccioli-dev.vercel.app">Portfólio</a>
+        </address>
+      </header>
+
+      <section>
+        <h2>Resumo profissional</h2>
+        <p class="section-description">Desenvolvimento full stack com foco em aplicações web funcionais, seguras, responsivas e orientadas às necessidades dos usuários.</p>
+        <div class="summary">
+          <p>Desenvolvedor Full Stack Júnior em transição de carreira para desenvolvimento de software, cursando Análise e Desenvolvimento de Sistemas e com experiência prática na criação de aplicações web com TypeScript, JavaScript, React, Next.js, Node.js e bancos de dados relacionais.</p>
+          <p>Experiência no desenvolvimento de interfaces responsivas, APIs, autenticação, autorização, controle de permissões, arquitetura multi-tenant, modelagem de dados, testes automatizados e publicação de aplicações.</p>
+          <p>Utilizo inteligência artificial como apoio estruturado ao processo de engenharia de software, incluindo engenharia de contexto, desenvolvimento orientado por especificações, agentes especializados, automação de workflows, revisão crítica de código e validação por testes e evidências.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Competências técnicas</h2>
+        <p class="section-description">Tecnologias, práticas e conceitos aplicados em projetos full stack e na evolução de produtos digitais.</p>
+        <ul class="skill-list">
+          <li><strong>Front-end</strong><span>JavaScript, TypeScript, React, Next.js, Vite, HTML5, CSS3, Tailwind CSS, shadcn/ui, Radix UI, React Hook Form, Zod, Zustand, design responsivo, mobile-first, acessibilidade e WCAG.</span></li>
+          <li><strong>Back-end e arquitetura</strong><span>Node.js, Express, Next.js App Router, Server Actions, APIs REST, APIs Serverless, Server-Sent Events, Socket.IO, autenticação, autorização, sessões HTTP-only, RBAC, multi-tenant e separação de responsabilidades.</span></li>
+          <li><strong>Bancos de dados e ORMs</strong><span>PostgreSQL, Neon PostgreSQL, MySQL, SQLite, Prisma, Drizzle ORM, better-sqlite3, modelagem relacional, migrações e seeds.</span></li>
+          <li><strong>Testes e qualidade</strong><span>Vitest, Testing Library, Playwright, testes unitários, de integração e end-to-end, TDD, ESLint, TypeScript Strict Mode, Git, GitHub e Conventional Commits.</span></li>
+          <li><strong>Analytics</strong><span>Google Tag Manager, Google Analytics 4, Google APIs, window.dataLayer, eventos de e-commerce, transaction_id, item_variant e tracking de produtos, carrinho, checkout e compra.</span></li>
+          <li><strong>Engenharia de software assistida por IA</strong><span>Engenharia de contexto, prompt engineering, orquestração de agentes, Agent Teams, workflows multiagente, skills reutilizáveis, MCP, Engram, memória persistente, SDD, human-in-the-loop, code review automatizado e debugging sistemático.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Experiência profissional</h2>
+        <div class="grid">
+          <article class="item">
+            <h3>Analista de Suporte Técnico — Hospital Israelita Albert Einstein / Escala.app</h3>
+            <p>Julho de 2021 — Janeiro de 2025</p>
+            <ul>
+              <li>Prestei suporte aos usuários de uma plataforma de gestão de escalas utilizada em operações hospitalares.</li>
+              <li>Analisei problemas, reproduzi cenários e coletei evidências para apoiar a equipe de desenvolvimento.</li>
+              <li>Identifiquei, documentei e acompanhei bugs junto às equipes técnicas.</li>
+              <li>Realizei testes manuais e validei funcionalidades antes e depois de publicações.</li>
+              <li>Criei uma Central de Ajuda que contribuiu para reduzir em mais de 80% os chamados fora do horário comercial.</li>
+              <li>Contribuí para a manutenção de índices de satisfação dos clientes superiores a 90%.</li>
+              <li>Traduzi necessidades operacionais em informações acionáveis para produto e tecnologia.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projetos relevantes</h2>
+        <div class="grid">
+          <article class="item">
+            <h3>Restaurante Comandas</h3>
+            <p>Sistema full stack de gestão operacional para restaurantes e pizzarias.</p>
+            <p><strong>Contexto:</strong> organizar operações em fluxos integrados para diferentes perfis de usuário, com atualização de pedidos e regras de negócio consistentes.</p>
+            <ul class="tech-list"><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Neon</li><li>Drizzle</li><li>Prisma</li><li>Server Actions</li><li>Socket.IO</li><li>Vitest</li><li>Playwright</li></ul>
+            <ul><li>Arquitetura multi-tenant, autenticação, sessões seguras e permissões por perfil.</li><li>Fluxos para proprietário, administrador, garçom, cozinha e caixa.</li><li>Dashboard Kanban e atualizações com SSE, Socket.IO e polling.</li><li>Testes unitários, de integração e end-to-end.</li></ul>
+          </article>
+          <article class="item">
+            <h3>TechZone Periféricos</h3>
+            <p>E-commerce demonstrativo de periféricos gamer e acessórios para computador.</p>
+            <p><strong>Contexto:</strong> construir uma jornada de compra completa, com catálogo, variações, carrinho, checkout simulado e tracking.</p>
+            <ul class="tech-list"><li>React</li><li>TypeScript</li><li>Vite</li><li>Node.js</li><li>APIs Serverless</li><li>Cookies HTTP-only</li><li>GTM</li><li>GA4</li><li>Vercel</li></ul>
+            <ul><li>Catálogo com categorias, busca, filtros, variações, favoritos e carrinho.</li><li>Persistência com cookies HTTP-only e fluxo de checkout simulado.</li><li>API Serverless para operações da aplicação.</li><li>Eventos de e-commerce com transaction_id e item_variant no window.dataLayer.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formação acadêmica</h2>
+        <article class="item">
+          <h3>Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
+          <p>Universidade Anhembi Morumbi</p>
+          <p>Início: Julho de 2025 — Previsão de conclusão: Janeiro de 2028</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <ul class="languages"><li>Inglês avançado — leitura, escrita e conversação</li></ul>
+      </section>
+
+      <section>
+        <h2>Contato</h2>
+        <p>Aberto a oportunidades como Desenvolvedor Full Stack Jr, Front-end Jr ou Web Jr.</p>
+        <div class="links"><a href="mailto:guifacciolic@gmail.com">guifacciolic@gmail.com</a></div>
+      </section>
+    </main>
+  </body>
+</html>
