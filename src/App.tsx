@@ -134,7 +134,7 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <p>© {new Date().getFullYear()} Guilherme Faccioli Crescencio</p>
+        <p>© {new Date().getFullYear()} Guilherme Faccioli</p>
         <a href="#top" data-track="portfolio_click" data-track-type="back-to-top">
           Voltar ao topo
         </a>

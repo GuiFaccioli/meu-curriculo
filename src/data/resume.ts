@@ -42,7 +42,7 @@ export type Language = {
 }
 
 export const resumeData = {
-  name: 'Guilherme Faccioli Crescencio',
+  name: 'Guilherme Faccioli',
   title:
     'Desenvolvedor Full Stack Jr | TypeScript | React | Next.js | Node.js | PostgreSQL | Engenharia de Software com IA',
   location: 'São Paulo, SP',
@@ -231,5 +231,8 @@ export const resumeData = {
       period: 'Início: Julho de 2025 — Previsão de conclusão: Janeiro de 2028',
     },
   ] as Education[],
-  languages: [{ name: 'Inglês', level: 'Avançado — leitura, escrita e conversação' }] as Language[],
+  languages: [
+    { name: 'Inglês', level: 'Avançado — leitura, escrita e conversação' },
+    { name: 'Espanhol', level: 'Iniciante' },
+  ] as Language[],
 }
