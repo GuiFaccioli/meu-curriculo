@@ -105,7 +105,7 @@ function App() {
 
         <SectionBlock
           id="projetos"
-          title="Projetos relevantes"
+          title="Projetos"
           trackingSectionName="projects"
         >
           <div className="projects-grid">
