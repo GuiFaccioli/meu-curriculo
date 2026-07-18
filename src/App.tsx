@@ -178,9 +178,6 @@ function App() {
           <a href="#top" data-track="portfolio_click" data-track-type="back-to-top">
             {copy.backToTop}
           </a>
-          <a className="icon-credit" href="https://icon-icons.com/icon/english-language-flag/26107" target="_blank" rel="noreferrer">
-            Icons-Land · CC BY 4.0
-          </a>
         </div>
       </footer>
     </div>
