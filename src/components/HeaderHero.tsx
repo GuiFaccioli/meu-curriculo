@@ -1,25 +1,27 @@
+import { SocialLinks } from './SocialLinks'
+import type { ResumeLink } from '../data/resume'
+
 type HeaderHeroProps = {
   name: string
   title: string
   location: string
-  phone: string
-  email: string
+  links: ResumeLink[]
+  linksAriaLabel: string
 }
 
-export function HeaderHero({ name, title, location, phone, email }: HeaderHeroProps) {
+export function HeaderHero({ name, title, location, links, linksAriaLabel }: HeaderHeroProps) {
   return (
     <header className="hero-band">
       <div className="hero-layout">
         <div className="hero-content">
-          
           <h1>{name}</h1>
           <p className="hero-title">{title}</p>
 
           <address className="hero-contact">
             <span>{location}</span>
-            <a href={`tel:${phone.replace(/\D/g, '')}`}>{phone}</a>
-            <span>{email}</span>
           </address>
+
+          <SocialLinks links={links} ariaLabel={linksAriaLabel} />
 
         </div>
       </div>

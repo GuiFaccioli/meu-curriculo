@@ -83,38 +83,6 @@ body {
   gap: 0.15rem 0.4rem;
 }
 
-.top-nav-social {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-left: auto;
-}
-
-.top-nav-social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 0.55rem;
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  color: var(--ink);
-  font-size: 0.78rem;
-  font-weight: 500;
-  line-height: 1.2;
-  transition: border-color 160ms ease, background-color 160ms ease;
-}
-
-.top-nav-social-link:hover,
-.top-nav-social-link:focus-visible {
-  border-color: var(--hairline-strong);
-  background: var(--surface);
-}
-
-.top-nav-social-link .social-icon {
-  width: 0.9rem;
-  height: 0.9rem;
-}
-
 .theme-toggle {
   display: inline-flex;
   flex: 0 0 auto;
@@ -222,11 +190,12 @@ main {
 .hero-content {
   max-width: 960px;
   margin-inline: auto;
+  text-align: center;
 }
 
 .hero-band h1 {
   max-width: 15ch;
-  margin-top: 0.7rem;
+  margin: 0.7rem auto 0;
   color: var(--ink);
   font-size: clamp(2.6rem, 8vw, 5.8rem);
   font-weight: 400;
@@ -237,7 +206,7 @@ main {
 
 .hero-title {
   max-width: 56rem;
-  margin-top: 1.2rem;
+  margin: 1.2rem auto 0;
   color: var(--ink);
   font-size: clamp(1rem, 2vw, 1.28rem);
   font-weight: 600;
@@ -247,6 +216,7 @@ main {
 .hero-contact {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.35rem 1.1rem;
   margin-top: 1.5rem;
   color: var(--body);
@@ -269,6 +239,7 @@ main {
 }
 
 .hero-links {
+  justify-content: center;
   margin-top: 2rem;
 }
 
@@ -306,25 +277,23 @@ main {
 
 .hero-link--secondary,
 .button-secondary {
-  border-color: var(--hairline-strong);
-  background: var(--surface);
   color: var(--ink);
 }
 
 .hero-link--secondary {
-  border-color: var(--hairline-strong);
-  background: var(--surface);
+  padding-inline: 0;
   color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline-strong);
+  text-underline-offset: 0.2em;
 }
 
 .hero-link--secondary:hover {
-  border-color: var(--ink);
-  background: var(--surface);
+  color: var(--accent-dark);
 }
 
 .section {
   padding: clamp(2.2rem, 5vw, 5rem) 0 0;
-  border-top: 1px solid var(--hairline-strong);
 }
 
 .section-head {
@@ -332,6 +301,7 @@ main {
   gap: 0.35rem;
   max-width: var(--content-width);
   margin-inline: auto;
+  text-align: center;
 }
 
 .section-title {
@@ -355,16 +325,18 @@ main {
   max-width: 960px;
   margin-top: 1.25rem;
   margin-inline: auto;
+  text-align: center;
 }
 
 .summary-copy {
   display: grid;
   gap: 1rem;
   max-width: var(--content-width);
+  margin-inline: auto;
   font-size: 1.02rem;
+  text-align: center;
 }
 
-.summary-copy strong,
 .skills-grid,
 .projects-grid {
   display: grid;
@@ -377,16 +349,14 @@ main {
 .experience-card,
 .education-card {
   padding: 1.15rem;
-  border: 1px solid var(--hairline);
-  border-radius: 12px;
-  background: var(--surface);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
 }
 
 .skill-category {
   padding: 1rem 0;
-  border-width: 1px 0 0;
-  border-radius: 0;
-  background: transparent;
 }
 
 .skill-category h3,
@@ -404,6 +374,7 @@ main {
 .project-tech-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.4rem 0.55rem;
   margin-top: 0.75rem;
 }
@@ -430,7 +401,7 @@ main {
 
 .project-card-head {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.8rem;
 }
 
@@ -452,9 +423,11 @@ main {
 .experience-card ul {
   display: grid;
   gap: 0.45rem;
-  padding-left: 1.1rem;
+  padding-left: 0;
   color: var(--body);
   font-size: 0.9rem;
+  list-style-position: inside;
+  text-align: center;
 }
 
 .project-card-actions {
@@ -465,6 +438,8 @@ main {
   display: grid;
   gap: 1rem;
   max-width: var(--content-width);
+  margin-inline: auto;
+  text-align: center;
 }
 
 .experience-card,
@@ -476,7 +451,7 @@ main {
 .experience-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.5rem 1rem;
 }
 
@@ -496,6 +471,7 @@ main {
   flex-wrap: wrap;
   gap: 0.7rem 1rem;
   max-width: var(--content-width);
+  margin-inline: auto;
   padding: 0;
   list-style: none;
 }
@@ -504,9 +480,10 @@ main {
   display: flex;
   gap: 0.5rem;
   padding: 0.55rem 0.7rem;
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  background: var(--surface);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: center;
 }
 
 .language-list strong {
@@ -560,18 +537,6 @@ button:focus-visible {
 
   .top-nav-links {
     gap: 0.1rem 0.25rem;
-  }
-
-  .top-nav-social {
-    margin-left: 0;
-  }
-
-  .top-nav-social-link {
-    padding: 0.4rem;
-  }
-
-  .top-nav-social-link span {
-    display: none;
   }
 
   .theme-toggle {

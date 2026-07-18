@@ -3,6 +3,7 @@ import type { ResumeLink } from '../data/resume'
 type SocialLinksProps = {
   links: ResumeLink[]
   section?: string
+  ariaLabel?: string
 }
 
 export function SocialLinkIcon({ kind }: { kind: ResumeLink['kind'] }) {
@@ -38,9 +39,9 @@ export function SocialLinkIcon({ kind }: { kind: ResumeLink['kind'] }) {
   )
 }
 
-export function SocialLinks({ links, section = 'hero' }: SocialLinksProps) {
+export function SocialLinks({ links, section = 'hero', ariaLabel = 'Ações principais' }: SocialLinksProps) {
   return (
-    <nav className="hero-links" aria-label="Ações principais">
+    <nav className="hero-links" aria-label={ariaLabel}>
       {links.map((link) => {
         const isExternal = link.external ?? link.href.startsWith('http')
         const className = `hero-link hero-link--${link.variant}`
