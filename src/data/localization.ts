@@ -19,6 +19,7 @@ export const interfaceCopy = {
     backToTop: 'Voltar ao topo',
     summary: 'Resumo profissional',
     skills: 'Competências técnicas',
+    skillsSummary: 'Desenvolvido com TypeScript, React e Next.js, utilizando Server Actions e SSE no back-end, PostgreSQL hospedado no Neon com Drizzle ORM e testes com Vitest, Testing Library e Playwright.',
     experience: 'Experiência profissional',
     projects: 'Projetos',
     education: 'Formação acadêmica',
@@ -35,6 +36,7 @@ export const interfaceCopy = {
     backToTop: 'Back to top',
     summary: 'Professional summary',
     skills: 'Technical skills',
+    skillsSummary: 'Built with TypeScript, React, and Next.js, using Server Actions and SSE on the back end, PostgreSQL hosted on Neon with Drizzle ORM, and tested with Vitest, Testing Library, and Playwright.',
     experience: 'Professional experience',
     projects: 'Projects',
     education: 'Education',
@@ -51,6 +53,7 @@ export const interfaceCopy = {
     backToTop: 'Volver arriba',
     summary: 'Resumen profesional',
     skills: 'Competencias técnicas',
+    skillsSummary: 'Desarrollado con TypeScript, React y Next.js, utilizando Server Actions y SSE en el back end, PostgreSQL alojado en Neon con Drizzle ORM y pruebas con Vitest, Testing Library y Playwright.',
     experience: 'Experiencia profesional',
     projects: 'Proyectos',
     education: 'Formación académica',
@@ -61,111 +64,20 @@ export const interfaceCopy = {
 
 const translatedSkills: Record<Exclude<Locale, 'pt'>, SkillGroupData[]> = {
   en: [
-    {
-      title: 'Front-end',
-      items: [...resumeData.skills[0].items.slice(0, 13), 'Responsive design', 'Mobile-first', 'Accessibility and WCAG'],
-    },
-    {
-      title: 'Back-end and architecture',
-      items: [
-        ...resumeData.skills[1].items.slice(0, 7),
-        'Authentication and authorization',
-        'HTTP-only sessions',
-        'Role-based access control',
-        'Multi-tenant architecture',
-        'Separation of concerns',
-      ],
-    },
-    {
-      title: 'Databases and ORMs',
-      items: [...resumeData.skills[2].items.slice(0, 7), 'Relational modeling', 'Migrations and seeds'],
-    },
-    {
-      title: 'Testing and quality',
-      items: [
-        ...resumeData.skills[3].items.slice(0, 3),
-        'Unit testing',
-        'Integration testing',
-        'End-to-end testing',
-        ...resumeData.skills[3].items.slice(7),
-      ],
-    },
-    {
-      title: 'AI-assisted software engineering',
-      items: [
-        'Context engineering',
-        'Prompt engineering',
-        'Agent orchestration',
-        'Specialized sub-agents',
-        'Agent Teams',
-        'Multi-agent workflows',
-        'Reusable skills',
-        'Superpowers',
-        'Model Context Protocol',
-        'Engram',
-        'Persistent memory',
-        'Spec-Driven Development',
-        'Human-in-the-loop',
-        'Automated code review',
-        'Systematic debugging',
-        'RED, GREEN, and REFACTOR cycle',
-      ],
-    },
+    { title: 'Front-end', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS', 'Responsive design'] },
+    { title: 'Back-end', items: ['Node.js', 'Next.js App Router', 'Server Actions', 'APIs', 'SSE', 'Authentication', 'HTTP-only sessions', 'Permissions', 'Multi-tenant architecture'] },
+    { title: 'Databases', items: ['PostgreSQL', 'Neon', 'Drizzle ORM', 'Relational modeling', 'Migrations', 'Seeds'] },
+    { title: 'Quality', items: ['Vitest', 'Testing Library', 'Playwright', 'Automated testing', 'Git', 'GitHub'] },
+    { title: 'Applied AI', items: ['Use of AI to support investigation, specification, critical review, and software validation.'] },
   ],
   es: [
-    {
-      title: 'Front-end',
-      items: [...resumeData.skills[0].items.slice(0, 13), 'Diseño responsivo', 'Mobile-first', 'Accesibilidad y WCAG'],
-    },
-    {
-      title: 'Back-end y arquitectura',
-      items: [
-        ...resumeData.skills[1].items.slice(0, 7),
-        'Autenticación y autorización',
-        'Sesiones HTTP-only',
-        'Control de acceso basado en roles',
-        'Arquitectura multi-tenant',
-        'Separación de responsabilidades',
-      ],
-    },
-    {
-      title: 'Bases de datos y ORMs',
-      items: [...resumeData.skills[2].items.slice(0, 7), 'Modelado relacional', 'Migraciones y seeds'],
-    },
-    {
-      title: 'Pruebas y calidad',
-      items: [
-        ...resumeData.skills[3].items.slice(0, 3),
-        'Pruebas unitarias',
-        'Pruebas de integración',
-        'Pruebas end-to-end',
-        ...resumeData.skills[3].items.slice(7),
-      ],
-    },
-    {
-      title: 'Ingeniería de software asistida por IA',
-      items: [
-        'Ingeniería de contexto',
-        'Prompt engineering',
-        'Orquestación de agentes',
-        'Subagentes especializados',
-        'Agent Teams',
-        'Workflows multiagente',
-        'Skills reutilizables',
-        'Superpowers',
-        'Model Context Protocol',
-        'Engram',
-        'Memoria persistente',
-        'Spec-Driven Development',
-        'Human-in-the-loop',
-        'Revisión de código automatizada',
-        'Debugging sistemático',
-        'Ciclo RED, GREEN y REFACTOR',
-      ],
-    },
+    { title: 'Front-end', items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS', 'Diseño responsivo'] },
+    { title: 'Back-end', items: ['Node.js', 'Next.js App Router', 'Server Actions', 'APIs', 'SSE', 'Autenticación', 'Sesiones HTTP-only', 'Permisos', 'Arquitectura multi-tenant'] },
+    { title: 'Bases de datos', items: ['PostgreSQL', 'Neon', 'Drizzle ORM', 'Modelado relacional', 'Migraciones', 'Seeds'] },
+    { title: 'Calidad', items: ['Vitest', 'Testing Library', 'Playwright', 'Pruebas automatizadas', 'Git', 'GitHub'] },
+    { title: 'IA aplicada', items: ['Uso de IA para apoyar la investigación, la especificación, la revisión crítica y la validación de software.'] },
   ],
 }
-
 export function getLocalizedResumeData(locale: Locale) {
   if (locale === 'pt') return resumeData
 
