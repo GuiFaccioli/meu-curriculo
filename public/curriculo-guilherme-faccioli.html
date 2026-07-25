@@ -135,9 +135,9 @@
         <div class="grid">
           <article class="item">
             <h3>Restaurante Comandas</h3>
-            <p>Sistema full stack de gestão operacional para restaurantes e pizzarias.</p>
-            <ul class="tech-list"><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Neon</li><li>Drizzle</li><li>Prisma</li><li>Server Actions</li><li>Socket.IO</li><li>Vitest</li><li>Playwright</li></ul>
-            <ul><li>Arquitetura multi-tenant, autenticação, sessões seguras e permissões por perfil.</li><li>Fluxos para proprietário, administrador, garçom, cozinha e caixa.</li><li>Dashboard Kanban e atualizações com SSE, Socket.IO e polling.</li><li>Testes unitários, de integração e end-to-end.</li></ul>
+            <p>Sistema full-stack para gestão operacional de restaurantes e pizzarias, com arquitetura multi-tenant para mesas, cardápio, pedidos, pagamentos, estoque e ficha técnica.</p>
+            <ul class="tech-list"><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>PostgreSQL</li><li>Neon</li><li>Drizzle ORM</li><li>Server Actions</li><li>SSE</li><li>Vitest</li><li>Testing Library</li><li>Playwright</li></ul>
+            <ul><li>Isolamento multi-tenant com integridade referencial por tenant_id.</li><li>Autenticação própria, sessões HTTP-only e permissões por perfil.</li><li>Fluxos para administração, garçom, cozinha e caixa.</li><li>Gestão de insumos, estoque mínimo, movimentações auditáveis e fichas técnicas.</li><li>Baixa de estoque vinculada aos pedidos, com idempotência e preservação de histórico.</li><li>Kanban da cozinha e atualizações operacionais em tempo real com SSE e polling.</li><li>Regras de comandas, cancelamento de itens, pagamentos e preço histórico.</li><li>Testes unitários, de integração e end-to-end.</li></ul>
           </article>
         </div>
       </section>
