@@ -18,6 +18,7 @@ export type Project = {
   name: string
   description: string
   technologies: string[]
+  technologySummary?: string
   highlights: string[]
   repoUrl?: string
   deployUrl?: string
@@ -84,23 +85,94 @@ export const resumeData = {
   skills: [
     {
       title: 'Front-end',
-      items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'HTML', 'CSS', 'Tailwind CSS', 'Design responsivo'],
+      items: [
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Next.js',
+        'Vite',
+        'HTML5',
+        'CSS3',
+        'Tailwind CSS',
+        'shadcn/ui',
+        'Radix UI',
+        'React Hook Form',
+        'Zod',
+        'Zustand',
+        'Design responsivo',
+        'Mobile-first',
+        'Acessibilidade e WCAG',
+      ],
     },
     {
-      title: 'Back-end',
-      items: ['Node.js', 'Next.js App Router', 'Server Actions', 'APIs', 'SSE', 'Autenticação', 'Sessões HTTP-only', 'Permissões', 'Arquitetura multi-tenant'],
+      title: 'Back-end e arquitetura',
+      items: [
+        'Node.js',
+        'Express',
+        'Next.js App Router',
+        'Server Actions',
+        'APIs REST',
+        'APIs Serverless',
+        'Server-Sent Events',
+        'Socket.IO',
+        'Autenticação e autorização',
+        'Sessões HTTP-only',
+        'Controle de acesso baseado em papéis',
+        'Arquitetura multi-tenant',
+        'Separação de responsabilidades',
+      ],
     },
     {
-      title: 'Banco de dados',
-      items: ['PostgreSQL', 'Neon', 'Drizzle ORM', 'Modelagem relacional', 'Migrations', 'Seeds'],
+      title: 'Bancos de dados e ORMs',
+      items: [
+        'PostgreSQL',
+        'Neon PostgreSQL',
+        'MySQL',
+        'SQLite',
+        'Prisma',
+        'Drizzle ORM',
+        'better-sqlite3',
+        'Modelagem relacional',
+        'Migrações e seeds',
+      ],
     },
     {
-      title: 'Qualidade',
-      items: ['Vitest', 'Testing Library', 'Playwright', 'Testes automatizados', 'Git', 'GitHub'],
+      title: 'Testes e qualidade',
+      items: [
+        'Vitest',
+        'Testing Library',
+        'Playwright',
+        'Testes unitários',
+        'Testes de integração',
+        'Testes end-to-end',
+        'TDD',
+        'ESLint',
+        'TypeScript Strict Mode',
+        'Git',
+        'GitHub',
+        'Conventional Commits',
+      ],
     },
     {
-      title: 'IA aplicada',
-      items: ['Uso de IA para apoiar investigação, especificação, revisão crítica e validação de software.'],
+      title: 'Engenharia de software assistida por IA',
+      items: [
+        'Engenharia de contexto',
+        'Prompt engineering',
+        'Orquestração de agentes',
+        'Subagentes especializados',
+        'Agent Teams',
+        'Workflows multiagente',
+        'Skills reutilizáveis',
+        'Superpowers',
+        'Model Context Protocol',
+        'Engram',
+        'Memória persistente',
+        'Spec-Driven Development',
+        'Human-in-the-loop',
+        'Code review automatizado',
+        'Debugging sistemático',
+        'Ciclo RED, GREEN e REFACTOR',
+      ],
     },
   ] as SkillGroupData[],
   projects: [
@@ -122,6 +194,8 @@ export const resumeData = {
         'Testing Library',
         'Playwright',
       ],
+      technologySummary:
+        'Desenvolvido com TypeScript, React e Next.js, utilizando Server Actions e SSE no back-end, PostgreSQL hospedado no Neon com Drizzle ORM e testes com Vitest, Testing Library e Playwright.',
       highlights: [
         'Isolamento multi-tenant com integridade referencial por tenant_id.',
         'Autenticação própria, sessões HTTP-only e permissões por perfil.',

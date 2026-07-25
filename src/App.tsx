@@ -5,6 +5,7 @@ import { HeaderHero } from './components/HeaderHero'
 import { LanguageList } from './components/LanguageList'
 import { ProjectCard } from './components/ProjectCard'
 import { SectionBlock } from './components/SectionBlock'
+import { SkillCategory } from './components/SkillCategory'
 import { getLocalizedResumeData, interfaceCopy, localeOptions, type Locale } from './data/localization'
 import { resumeData } from './data/resume'
 import { usePortfolioTracking } from './tracking/usePortfolioTracking'
@@ -122,8 +123,10 @@ function App() {
           title={copy.skills}
           trackingSectionName="skills"
         >
-          <div className="summary-copy">
-            <p>{copy.skillsSummary}</p>
+          <div className="skills-grid">
+            {content.skills.map((group) => (
+              <SkillCategory key={group.title} title={group.title} items={group.items} />
+            ))}
           </div>
         </SectionBlock>
 

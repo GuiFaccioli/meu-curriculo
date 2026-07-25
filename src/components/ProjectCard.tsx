@@ -22,13 +22,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <p className="project-description">{project.description}</p>
 
-      <div className="project-tech-list" aria-label={`Tecnologias de ${project.name}`}>
-        {project.technologies.map((tech) => (
-          <span key={tech} className="project-tech-item">
-            {tech}
-          </span>
-        ))}
-      </div>
+      {project.technologySummary ? (
+        <p className="project-description">{project.technologySummary}</p>
+      ) : (
+        <div className="project-tech-list" aria-label={`Tecnologias de ${project.name}`}>
+          {project.technologies.map((tech) => (
+            <span key={tech} className="project-tech-item">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
 
       <ul className="project-highlights">
         {project.highlights.map((highlight) => (
