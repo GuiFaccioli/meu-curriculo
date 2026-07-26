@@ -9,7 +9,7 @@
 **Tech Stack:** React 19, TypeScript, Vite, CSS.
 
 ## Global Constraints
-- The global skills section renders only the approved eight-item Front-end category.
+- The global skills section renders exactly four approved groups: Front-end; Back-end e arquitetura; Bancos de dados; and Engenharia de software assistida por IA.\n- Testes e qualidade does not render.
 - Project card labels are localized for Portuguese, English, and Spanish.
 - Do not reintroduce technology badges for Restaurante Comandas.
 - Header stays sticky, flush to the top, and spans the viewport width.
@@ -28,7 +28,7 @@
 
 - [ ] **Step 1: Limit the Portuguese skills data**
 
-Set `resumeData.skills` to one `Front-end` group with: `JavaScript`, `TypeScript`, `React`, `Next.js`, `Vite`, `HTML5`, `CSS3`, and `Tailwind CSS`.
+Set `resumeData.skills` to exactly four groups: `Front-end` with `JavaScript`, `TypeScript`, `React`, `Next.js`, `Vite`, `HTML5`, `CSS3`, `Tailwind CSS`; `Back-end e arquitetura` with `Node.js`, `Express`, `Next.js App Router`; `Bancos de dados` with `PostgreSQL`, `Neon`, `Prisma`; and `Engenharia de software assistida por IA` with `Engenharia de contexto`, `Prompt engineering`, `Orquestração de agentes`, `Superpowers`, `SDD`. Do not include `Testes e qualidade`.
 
 - [ ] **Step 2: Add localized labels**
 
@@ -36,7 +36,7 @@ Add PT labels `Visão do projeto`, `Stack principal`, and `Diferenciais implemen
 
 - [ ] **Step 3: Keep translated skills aligned**
 
-Make `translatedSkills.en` and `translatedSkills.es` each return one Front-end group with the same technology names.
+Make `translatedSkills.en` and `translatedSkills.es` each return the same four groups with localized titles and the matching technology names. Do not return a testing-and-quality group.
 
 - [ ] **Step 4: Verify type checking**
 
