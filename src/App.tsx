@@ -149,7 +149,7 @@ function App() {
         >
           <div className="projects-grid">
             {content.projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
+              <ProjectCard key={project.name} project={project} labels={copy.projectLabels} />
             ))}
           </div>
         </SectionBlock>

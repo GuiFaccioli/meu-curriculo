@@ -2,10 +2,22 @@ import type { Project } from '../data/resume'
 
 type ProjectCardProps = {
   project: Project
+  labels: {
+    overview: string
+    stack: string
+    differentiators: string
+  }
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, labels }: ProjectCardProps) {
   const hasProjectActions = Boolean(project.deployUrl || project.repoUrl)
+  const projectId =
+    project.name
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'project'
 
   return (
     <article
@@ -20,25 +32,34 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <p className="project-description">{project.description}</p>
+      <section aria-labelledby={`${projectId}-overview`}>
+        <h4 id={`${projectId}-overview`}>{labels.overview}</h4>
+        <p className="project-description">{project.description}</p>
+      </section>
 
-      {project.technologySummary ? (
-        <p className="project-description">{project.technologySummary}</p>
-      ) : (
-        <div className="project-tech-list" aria-label={`Tecnologias de ${project.name}`}>
-          {project.technologies.map((tech) => (
-            <span key={tech} className="project-tech-item">
-              {tech}
-            </span>
+      <section aria-labelledby={`${projectId}-stack`}>
+        <h4 id={`${projectId}-stack`}>{labels.stack}</h4>
+        {project.technologySummary ? (
+          <p className="project-description">{project.technologySummary}</p>
+        ) : (
+          <div className="project-tech-list">
+            {project.technologies.map((tech) => (
+              <span key={tech} className="project-tech-item">
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section aria-labelledby={`${projectId}-differentiators`}>
+        <h4 id={`${projectId}-differentiators`}>{labels.differentiators}</h4>
+        <ul className="project-highlights">
+          {project.highlights.map((highlight) => (
+            <li key={highlight}>{highlight}</li>
           ))}
-        </div>
-      )}
-
-      <ul className="project-highlights">
-        {project.highlights.map((highlight) => (
-          <li key={highlight}>{highlight}</li>
-        ))}
-      </ul>
+        </ul>
+      </section>
 
       {hasProjectActions ? (
         <div className="project-card-actions" aria-label={`Ações do projeto ${project.name}`}>

@@ -51,6 +51,7 @@
       .item p { margin-top: 8px; }
       .item ul { margin-top: 10px; }
       .item li + li { margin-top: 5px; }
+      .project-label { margin-top: 16px; color: var(--muted); font: 500 11px/1.4 'JetBrains Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; }
       .tech-list { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 12px 0 0; list-style: none; }
       .tech-list li { padding: 3px 6px; border-radius: 4px; background: var(--surface-soft); color: var(--ink); font: 400 12px/1.4 'JetBrains Mono', monospace; }
       .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
@@ -103,11 +104,10 @@
       <section>
         <h2>Competências técnicas</h2>
         <ul class="skill-list">
-          <li><strong>Front-end</strong><span>JavaScript, TypeScript, React, Next.js, Vite, HTML5, CSS3, Tailwind CSS, shadcn/ui, Radix UI, React Hook Form, Zod, Zustand, design responsivo, mobile-first, acessibilidade e WCAG.</span></li>
-          <li><strong>Back-end e arquitetura</strong><span>Node.js, Express, Next.js App Router, Server Actions, APIs REST, APIs Serverless, Server-Sent Events, Socket.IO, autenticação, autorização, sessões HTTP-only, RBAC, multi-tenant e separação de responsabilidades.</span></li>
-          <li><strong>Bancos de dados e ORMs</strong><span>PostgreSQL, Neon PostgreSQL, MySQL, SQLite, Prisma, Drizzle ORM, better-sqlite3, modelagem relacional, migrações e seeds.</span></li>
-          <li><strong>Testes e qualidade</strong><span>Vitest, Testing Library, Playwright, testes unitários, de integração e end-to-end, TDD, ESLint, TypeScript Strict Mode, Git, GitHub e Conventional Commits.</span></li>
-          <li><strong>Engenharia de software assistida por IA</strong><span>Engenharia de contexto, prompt engineering, orquestração de agentes, Agent Teams, workflows multiagente, skills reutilizáveis, MCP, Engram, memória persistente, SDD, human-in-the-loop, code review automatizado e debugging sistemático.</span></li>
+          <li><strong>Front-end</strong><span>JavaScript, TypeScript, React, Next.js, Vite, HTML5, CSS3, Tailwind CSS</span></li>
+          <li><strong>Back-end e arquitetura</strong><span>Node.js, Express, Next.js App Router</span></li>
+          <li><strong>Bancos de dados</strong><span>PostgreSQL, Neon, Prisma</span></li>
+          <li><strong>Engenharia de software assistida por IA</strong><span>Engenharia de contexto, Prompt engineering, Orquestração de agentes, Superpowers, SDD</span></li>
         </ul>
       </section>
 
@@ -135,8 +135,11 @@
         <div class="grid">
           <article class="item">
             <h3>Restaurante Comandas</h3>
+            <p class="project-label">Visão do projeto</p>
             <p>Sistema full-stack para gestão operacional de restaurantes e pizzarias, com arquitetura multi-tenant para mesas, cardápio, pedidos, pagamentos, estoque e ficha técnica.</p>
+            <p class="project-label">Stack principal</p>
             <p>Desenvolvido com TypeScript, React e Next.js, utilizando Server Actions e SSE no back-end, PostgreSQL hospedado no Neon com Drizzle ORM e testes com Vitest, Testing Library e Playwright.</p>
+            <p class="project-label">Diferenciais implementados</p>
             <ul><li>Isolamento multi-tenant com integridade referencial por tenant_id.</li><li>Autenticação própria, sessões HTTP-only e permissões por perfil.</li><li>Fluxos para administração, garçom, cozinha e caixa.</li><li>Gestão de insumos, estoque mínimo, movimentações auditáveis e fichas técnicas.</li><li>Baixa de estoque vinculada aos pedidos, com idempotência e preservação de histórico.</li><li>Kanban da cozinha e atualizações operacionais em tempo real com SSE e polling.</li><li>Regras de comandas, cancelamento de itens, pagamentos e preço histórico.</li><li>Testes unitários, de integração e end-to-end.</li></ul>
           </article>
         </div>
