@@ -4,9 +4,15 @@
 Make the Restaurante Comandas card clearly distinguish project context, its primary stack, and its implementation differentiators without reintroducing technology badges.
 
 ## Scope
-- Keep the global technical-skills section unchanged.
-- Update only the project card and its printable curriculum equivalent.
+- Keep the global technical-skills section unchanged except for limiting it to the approved Front-end list: JavaScript, TypeScript, React, Next.js, Vite, HTML5, CSS3, and Tailwind CSS.
+- Update the project card and its printable curriculum equivalent.\n- Make the header flush with the viewport top and span its full width.
 - Preserve Portuguese, English, and Spanish localization.
+
+## Header presentation
+The header will remain sticky at 	op: 0, span the viewport width, and use square outer edges so it reads as a full-width application bar. The inner navigation content remains constrained to the existing content width for readable alignment.
+
+## Technical skills presentation
+The global technical skills section will retain its category component but expose only one Front-end category containing the approved eight technologies. Other global skill categories will not render.
 
 ## Presentation
 The project card will have three labeled sections:
