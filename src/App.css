@@ -335,7 +335,7 @@ main {
 .section-content {
   display: grid;
   gap: 1rem;
-  max-width: 960px;
+  max-width: var(--content-width);
   margin-top: 1.25rem;
   margin-inline: auto;
   text-align: left;
@@ -359,7 +359,7 @@ main {
 
 .projects-grid {
   grid-template-columns: minmax(0, 1fr);
-  max-width: 760px;
+  max-width: var(--content-width);
   margin-inline: auto;
 }
 
@@ -466,8 +466,8 @@ main {
 }
 
 .project-description {
-  max-width: 52rem;
-  margin-inline: auto;
+  max-width: 100%;
+  margin-inline: 0;
 }
 
 .project-highlights,
@@ -483,7 +483,7 @@ main {
 
 .project-highlights {
   width: 100%;
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 .experience-card ul {
@@ -670,4 +670,6 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
 
