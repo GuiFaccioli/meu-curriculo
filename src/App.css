@@ -88,7 +88,7 @@ main,
   display: flex;
   flex: 1 1 auto;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.15rem 0.4rem;
   min-width: 0;
 }
@@ -121,7 +121,7 @@ main,
   align-items: center;
   gap: 0.02rem;
   min-width: 2.25rem;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0.25rem 0.35rem;
   border: 1px solid transparent;
   border-radius: 6px;
@@ -176,7 +176,7 @@ main,
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   transition: background-color 160ms ease, color 160ms ease;
 }
 
@@ -202,12 +202,12 @@ main {
 .hero-content {
   max-width: 960px;
   margin-inline: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-band h1 {
   max-width: 15ch;
-  margin: 0.7rem auto 0;
+  margin: 0.7rem 0 0;
   color: var(--ink);
   font-size: clamp(2.6rem, 8vw, 5.8rem);
   font-weight: 400;
@@ -218,7 +218,7 @@ main {
 
 .hero-title {
   max-width: 56rem;
-  margin: 1.2rem auto 0;
+  margin: 1.2rem 0 0;
   color: var(--ink);
   font-size: clamp(1rem, 2vw, 1.28rem);
   font-weight: 600;
@@ -228,7 +228,7 @@ main {
 .hero-contact {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.35rem 1.1rem;
   margin-top: 1.5rem;
   color: var(--body);
@@ -251,7 +251,7 @@ main {
 }
 
 .hero-links {
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 2rem;
 }
 
@@ -259,7 +259,7 @@ main {
 .button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
   min-height: 2.5rem;
   padding: 0.6rem 0.8rem;
@@ -313,7 +313,7 @@ main {
   gap: 0.35rem;
   max-width: var(--content-width);
   margin-inline: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .section-title {
@@ -337,7 +337,7 @@ main {
   max-width: 960px;
   margin-top: 1.25rem;
   margin-inline: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .summary-copy {
@@ -346,7 +346,7 @@ main {
   max-width: var(--content-width);
   margin-inline: auto;
   font-size: 1.02rem;
-  text-align: center;
+  text-align: left;
 }
 
 .skills-grid,
@@ -370,7 +370,7 @@ main {
   border: 0;
   border-radius: 0;
   background: transparent;
-  text-align: center;
+  text-align: left;
 }
 
 .skill-category {
@@ -392,7 +392,7 @@ main {
 .project-tech-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.4rem 0.55rem;
   margin-top: 0.75rem;
 }
@@ -441,7 +441,7 @@ main {
 
 .project-card-head {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.8rem;
 }
 
@@ -472,7 +472,7 @@ main {
   color: var(--body);
   font-size: 0.9rem;
   list-style: none;
-  text-align: center;
+  text-align: left;
 }
 
 .project-highlights {
@@ -494,7 +494,7 @@ main {
   gap: 1rem;
   max-width: var(--content-width);
   margin-inline: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .experience-card,
@@ -506,7 +506,7 @@ main {
 .experience-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem 1rem;
 }
 
@@ -540,7 +540,7 @@ main {
   border: 0;
   border-radius: 0;
   background: transparent;
-  text-align: center;
+  text-align: left;
 }
 
 .language-list strong {
@@ -598,7 +598,7 @@ button:focus-visible {
   .top-nav-links {
     flex: 0 0 100%;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     order: 4;
     gap: 0.1rem 0.25rem;
   }
@@ -664,3 +664,4 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
