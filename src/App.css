@@ -228,12 +228,13 @@ main {
 .hero-contact {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.35rem 1.1rem;
   margin-top: 1.5rem;
   color: var(--body);
   font-size: 0.9rem;
   font-style: normal;
+  text-align: center;
 }
 
 .hero-contact a {
@@ -251,7 +252,7 @@ main {
 }
 
 .hero-links {
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 2rem;
 }
 
@@ -352,7 +353,7 @@ main {
 .skills-grid,
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -375,6 +376,11 @@ main {
 
 .skill-category {
   padding: 1rem 0;
+}
+
+.skills-grid {
+  max-width: var(--content-width);
+  margin-inline: auto;
 }
 
 .skill-category h3,
