@@ -379,8 +379,8 @@ main {
 }
 
 .skills-grid {
-  max-width: var(--content-width);
-  margin-inline: auto;
+  width: 100%;
+  margin-inline: 0;
 }
 
 .skill-category h3,
@@ -498,8 +498,8 @@ main {
 .stack {
   display: grid;
   gap: 1rem;
-  max-width: var(--content-width);
-  margin-inline: auto;
+  width: 100%;
+  margin-inline: 0;
   text-align: left;
 }
 
