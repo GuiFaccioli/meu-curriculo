@@ -529,7 +529,7 @@ main {
 
 .language-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.7rem 1rem;
   width: 100%;
   margin-inline: 0;
@@ -539,8 +539,8 @@ main {
 
 .language-list li {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.2rem;
   padding: 0.55rem 0.7rem;
   border: 0;
