@@ -131,10 +131,10 @@ export function getLocalizedResumeData(locale: Locale) {
   if (locale === 'en') {
     return {
       ...resumeData,
-      title: 'Junior Full Stack Developer | TypeScript | React | Next.js | Node.js | PostgreSQL | AI-assisted Software Engineering',
+      title: 'Full Stack Developer | TypeScript | React | Next.js | Node.js | PostgreSQL | AI-assisted Software Engineering',
       location: 'São Paulo, Brazil',
       summary:
-        'Junior Full Stack Developer transitioning into software development, currently pursuing a degree in Systems Analysis and Development. I build responsive web applications and APIs with experience in authentication, authorization, permission management, multi-tenant architecture, relational modeling, and automated testing. My previous technical support experience strengthened my ability to investigate issues, validate workflows, and turn user needs into product improvements.',
+        'Full Stack Developer transitioning into software development, currently pursuing a degree in Systems Analysis and Development. I build responsive web applications and APIs with experience in authentication, authorization, permission management, multi-tenant architecture, relational modeling, and automated testing. My previous technical support experience strengthened my ability to investigate issues, validate workflows, and turn user needs into product improvements.',
       aiSummary:
         'I use artificial intelligence as structured support for the software engineering process, including context engineering, specification-driven development, specialized agents, workflow automation, critical code review, and validation through tests and evidence.',
       sections: resumeData.sections.map((section, index) => ({ ...section, label: interfaceCopy.en.sectionLabels[index] })),
@@ -193,10 +193,10 @@ export function getLocalizedResumeData(locale: Locale) {
 
   return {
     ...resumeData,
-    title: 'Desarrollador Full Stack Jr | TypeScript | React | Next.js | Node.js | PostgreSQL | Ingeniería de Software con IA',
+    title: 'Desarrollador Full Stack | TypeScript | React | Next.js | Node.js | PostgreSQL | Ingeniería de Software con IA',
     location: 'São Paulo, Brasil',
     summary:
-      'Desarrollador Full Stack Junior en transición hacia el desarrollo de software, actualmente cursando Análisis y Desarrollo de Sistemas. Desarrollo aplicaciones web responsivas y APIs con experiencia en autenticación, autorización, control de permisos, arquitectura multi-tenant, modelado relacional y pruebas automatizadas. Mi experiencia previa en soporte técnico fortaleció mi capacidad para investigar problemas, validar flujos y transformar las necesidades de los usuarios en mejoras de producto.',
+      'Desarrollador Full Stack en transición hacia el desarrollo de software, actualmente cursando Análisis y Desarrollo de Sistemas. Desarrollo aplicaciones web responsivas y APIs con experiencia en autenticación, autorización, control de permisos, arquitectura multi-tenant, modelado relacional y pruebas automatizadas. Mi experiencia previa en soporte técnico fortaleció mi capacidad para investigar problemas, validar flujos y transformar las necesidades de los usuarios en mejoras de producto.',
     aiSummary:
       'Utilizo la inteligencia artificial como apoyo estructurado al proceso de ingeniería de software, incluyendo ingeniería de contexto, desarrollo orientado por especificaciones, agentes especializados, automatización de workflows, revisión crítica de código y validación mediante pruebas y evidencias.',
     sections: resumeData.sections.map((section, index) => ({ ...section, label: interfaceCopy.es.sectionLabels[index] })),
@@ -252,3 +252,4 @@ export function getLocalizedResumeData(locale: Locale) {
     ],
   } as typeof resumeData
 }
+

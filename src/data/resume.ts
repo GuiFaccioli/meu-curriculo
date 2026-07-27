@@ -45,12 +45,12 @@ export type Language = {
 export const resumeData = {
   name: 'Guilherme Faccioli',
   title:
-    'Desenvolvedor Full Stack Jr | TypeScript | React | Next.js | Node.js | PostgreSQL | Engenharia de Software com IA',
+    'Desenvolvedor Full Stack | TypeScript | React | Next.js | Node.js | PostgreSQL | Engenharia de Software com IA',
   location: 'São Paulo, SP',
   phone: '(11) 95269-5934',
   email: 'guifacciolic@gmail.com',
   summary:
-    'Desenvolvedor Full Stack Júnior em transição de carreira para desenvolvimento de software, cursando Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web responsivas e APIs, com experiência em autenticação, autorização, controle de permissões, arquitetura multi-tenant, modelagem relacional e testes automatizados. Minha experiência anterior em suporte técnico fortaleceu minha capacidade de investigar problemas, validar fluxos e transformar necessidades de usuários em melhorias de produto.',
+    'Desenvolvedor Full Stack em transição de carreira para desenvolvimento de software, cursando Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web responsivas e APIs, com experiência em autenticação, autorização, controle de permissões, arquitetura multi-tenant, modelagem relacional e testes automatizados. Minha experiência anterior em suporte técnico fortaleceu minha capacidade de investigar problemas, validar fluxos e transformar necessidades de usuários em melhorias de produto.',
   aiSummary:
     'Utilizo inteligência artificial como apoio estruturado ao processo de engenharia de software, incluindo engenharia de contexto, desenvolvimento orientado por especificações, agentes especializados, automação de workflows, revisão crítica de código e validação por testes e evidências.',
   links: [
@@ -162,3 +162,4 @@ export const resumeData = {
     { name: 'Espanhol', level: 'Intermediário — leitura, escrita e conversação' },
   ] as Language[],
 }
+
