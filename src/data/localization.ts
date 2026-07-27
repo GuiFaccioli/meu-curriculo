@@ -28,7 +28,7 @@ export const interfaceCopy = {
       stack: 'Stack principal',
       differentiators: 'Diferenciais implementados',
     },
-    sectionLabels: ['Resumo', 'Competências', 'Experiência', 'Projetos', 'Formação'],
+    sectionLabels: ['Resumo', 'Experiência', 'Formação', 'Projetos', 'Competências'],
   },
   en: {
     home: 'Back to home',
@@ -49,7 +49,7 @@ export const interfaceCopy = {
       stack: 'Main stack',
       differentiators: 'Implemented differentiators',
     },
-    sectionLabels: ['Summary', 'Skills', 'Experience', 'Projects', 'Education'],
+    sectionLabels: ['Summary', 'Experience', 'Education', 'Projects', 'Skills'],
   },
   es: {
     home: 'Volver al inicio',
@@ -70,7 +70,7 @@ export const interfaceCopy = {
       stack: 'Stack principal',
       differentiators: 'Diferenciadores implementados',
     },
-    sectionLabels: ['Resumen', 'Competencias', 'Experiencia', 'Proyectos', 'Formación'],
+    sectionLabels: ['Resumen', 'Experiencia', 'Formación', 'Proyectos', 'Competencias'],
   },
 } as const
 

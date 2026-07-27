@@ -119,18 +119,6 @@ function App() {
         </SectionBlock>
 
         <SectionBlock
-          id="competencias"
-          title={copy.skills}
-          trackingSectionName="skills"
-        >
-          <div className="skills-grid">
-            {content.skills.map((group) => (
-              <SkillCategory key={group.title} title={group.title} items={group.items} />
-            ))}
-          </div>
-        </SectionBlock>
-
-        <SectionBlock
           id="experiencia"
           title={copy.experience}
           trackingSectionName="experience"
@@ -138,6 +126,18 @@ function App() {
           <div className="stack">
             {content.experiences.map((experience) => (
               <ExperienceCard key={`${experience.company}-${experience.period}`} item={experience} />
+            ))}
+          </div>
+        </SectionBlock>
+
+        <SectionBlock
+          id="formacao"
+          title={copy.education}
+          trackingSectionName="education"
+        >
+          <div className="stack">
+            {content.education.map((education) => (
+              <EducationCard key={`${education.course}-${education.period}`} education={education} />
             ))}
           </div>
         </SectionBlock>
@@ -155,13 +155,13 @@ function App() {
         </SectionBlock>
 
         <SectionBlock
-          id="formacao"
-          title={copy.education}
-          trackingSectionName="education"
+          id="competencias"
+          title={copy.skills}
+          trackingSectionName="skills"
         >
-          <div className="stack">
-            {content.education.map((education) => (
-              <EducationCard key={`${education.course}-${education.period}`} education={education} />
+          <div className="skills-grid">
+            {content.skills.map((group) => (
+              <SkillCategory key={group.title} title={group.title} items={group.items} />
             ))}
           </div>
         </SectionBlock>
