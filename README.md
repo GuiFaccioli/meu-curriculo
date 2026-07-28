@@ -1,121 +1,78 @@
-# Currículo Online — Guilherme Faccioli
+# Guilherme Faccioli — Currículo
 
-Portfólio/currículo online desenvolvido com React + TypeScript + Vite para apresentar perfil profissional, projetos, experiência, formação e competências de forma clara, responsiva e rastreável.
+Desenvolvedor Full Stack em transição de carreira, cursando Análise e Desenvolvimento de Sistemas, com foco em aplicações web, APIs, arquitetura multi-tenant, modelagem relacional e testes automatizados.
 
-## Status atual do projeto
+## Contato
 
-- Layout editorial responsivo com navegação por seções.
-- Seções em accordion para medir interações reais do usuário.
-- Projetos, certificados e CTAs com tracking centralizado.
-- Favicon personalizado com ícone minimalista de prancheta/currículo.
-- Integração preparada para GTM + GA4 via `dataLayer`, sem `gtag.js` direto no app.
-
-## Deploy
-
-- **Plataforma:** Vercel
-- **URL de produção:** https://guilherme-faccioli-dev.vercel.app/
-- **Branch principal:** `main`
-
-## Ambiente
-
-O projeto carrega o Google Tag Manager por variável de ambiente configurada localmente
-ou na Vercel:
-
-```env
-VITE_GTM_ID=GTM-XXXXXXX
-```
-
-Notas importantes:
-
-- `VITE_GTM_ID` é o ID do container do Google Tag Manager.
-- O valor real deve ficar em `.env.local` ou nas variáveis de ambiente da Vercel.
-- O Measurement ID do GA4 não fica no `.env` do projeto.
-- O GA4 é configurado dentro do GTM.
-- Não existe `gtag.js` direto no app.
-
-## Analytics e Tracking
-
-O tracking do portfólio é centralizado em `window.dataLayer` e validado no GTM/GA4.
-
-Eventos principais:
-
-- `portfolio_click`
-- `section_toggle`
-- `section_view`
-- `engagement_time_checkpoint`
-
-O evento `portfolio_click` envia os principais parâmetros de clique:
-
-- `track_name`
-- `click_type`
-- `click_name`
-- `click_text`
-- `click_url`
-- `click_location`
-- `section_name`
-- `project_name`
-- `outbound`
-- `page_path`
-
-`click_name` espelha `click_type` e `click_location` espelha `section_name`, com fallback para `"unknown"` quando o valor base não existe.
-
-Fluxo atual:
-
-1. Usuário interage no portfólio.
-2. O React dispara `dataLayer.push()`.
-3. O GTM escuta o Custom Event.
-4. A tag GA4 Event dispara.
-5. O GA4 recebe o evento.
-6. Realtime/DebugView mostram os dados.
-
-Validação:
-
-- GA4 Realtime
-- GA4 DebugView
-- Preview do GTM
-
-Detalhes da implementação:
-
-- [`docs/tracking/events.md`](docs/tracking/events.md)
-- [`docs/tracking/gtm-ga4.md`](docs/tracking/gtm-ga4.md)
-- [`docs/tracking/gtm-export-template.md`](docs/tracking/gtm-export-template.md)
-
-## Design e interações
-
-O portfólio foi simplificado com uma linguagem editorial mais limpa, CTAs claros e seções em accordion focadas em interação real.
-
-Atualizações visuais recentes:
-
-- Favicon substituído por uma prancheta minimalista para representar currículo.
-- Navegação superior com links rastreáveis para GitHub e LinkedIn.
-- Cards de projeto com ações rastreáveis para repositório, deploy ou contato.
-
-Detalhes da implementação:
-
-[`docs/design-implementation.md`](docs/design-implementation.md)
-
-## Tecnologias
-
-- React
-- TypeScript
-- Vite
-- CSS
-
-## Como rodar localmente
-
-```bash
-npm install
-npm run dev
-```
-
-## Como gerar build
-
-```bash
-npm run build
-```
-
-## Links
-
-- Portfólio online: https://guilherme-faccioli-dev.vercel.app/
+- São Paulo, SP
 - GitHub: https://github.com/GuiFaccioli
 - LinkedIn: https://www.linkedin.com/in/guilherme-faccioli-b8a46611a/
+- E-mail: guifacciolic@gmail.com
+- Telefone: (11) 95269-5934
+
+## Resumo profissional
+
+Atuo com desenvolvimento front-end e back-end em projetos web usando TypeScript, React, Next.js, Node.js e PostgreSQL. Tenho experiência com autenticação, autorização, controle de permissões, arquitetura multi-tenant, modelagem relacional e validação por testes.
+
+Minha experiência anterior em suporte técnico fortaleceu minha capacidade de investigar problemas, reproduzir cenários, coletar evidências e transformar necessidades de usuários em melhorias de produto.
+
+Também utilizo inteligência artificial como apoio estruturado ao processo de engenharia de software, incluindo engenharia de contexto, desenvolvimento orientado por especificações, agentes especializados, automação de workflows, revisão crítica de código e validação por testes e evidências.
+
+## Experiência
+
+### Analista de Suporte Técnico
+Hospital Israelita Albert Einstein — Escala.app  
+Julho de 2021 — Janeiro de 2025
+
+- Prestei suporte aos usuários de uma plataforma de gestão de escalas utilizada em operações hospitalares.
+- Analisei problemas relatados por clientes, reproduzindo cenários e coletando evidências para apoiar a equipe de desenvolvimento.
+- Identifiquei, documentei e acompanhei bugs junto às equipes técnicas.
+- Realizei testes manuais e validei funcionalidades antes e depois de publicações.
+- Criei e organizei uma Central de Ajuda que contribuiu para reduzir em mais de 80% os chamados realizados fora do horário comercial.
+- Contribuí para a manutenção de índices de satisfação dos clientes superiores a 90%.
+- Traduzi relatos e necessidades operacionais em informações acionáveis para produto e tecnologia.
+- Acompanhei métricas, participei de reuniões de melhoria e desenvolvi conhecimento em regras de negócio, causa raiz e experiência do usuário.
+
+## Formação acadêmica
+
+### Tecnologia em Análise e Desenvolvimento de Sistemas
+Universidade Anhembi Morumbi  
+Início: Julho de 2025 — Previsão de conclusão: Janeiro de 2028
+
+## Projetos
+
+### Restaurante Comandas
+Sistema full-stack para gestão operacional de restaurantes e pizzarias, com arquitetura multi-tenant para mesas, cardápio, pedidos, pagamentos, estoque e ficha técnica.
+
+**Stack principal:** TypeScript, React, Next.js, Node.js, PostgreSQL, Neon, Drizzle ORM, Server Actions, SSE, Vitest, Testing Library, Playwright
+
+**Diferenciais implementados:**
+
+- Isolamento multi-tenant com integridade referencial por tenant_id.
+- Autenticação própria, sessões HTTP-only e permissões por perfil.
+- Fluxos para administração, garçom, cozinha e caixa.
+- Gestão de insumos, estoque mínimo, movimentações auditáveis e fichas técnicas.
+- Baixa de estoque vinculada aos pedidos, com idempotência e preservação de histórico.
+- Kanban da cozinha e atualizações operacionais em tempo real com SSE e polling.
+- Regras de comandas, cancelamento de itens, pagamentos e preço histórico.
+- Testes unitários, de integração e end-to-end.
+
+## Competências
+
+### Front-end
+JavaScript, TypeScript, React, Next.js, Vite, HTML5, CSS3, Tailwind CSS
+
+### Back-end e arquitetura
+Node.js, Express, Next.js App Router
+
+### Bancos de dados
+PostgreSQL, Neon, Prisma
+
+### Engenharia de software assistida por IA
+Engenharia de contexto, Prompt engineering, Orquestração de agentes, Superpowers, SDD
+
+## Idiomas
+
+- Inglês — Avançado: leitura, escrita e conversação
+- Espanhol — Intermediário: leitura, escrita e conversação
+
