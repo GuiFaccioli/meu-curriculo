@@ -121,6 +121,7 @@ export const resumeData = {
       ],
       technologySummary:
         'Desenvolvido com TypeScript, React e Next.js, utilizando Server Actions e SSE no back-end, PostgreSQL hospedado no Neon com Drizzle ORM e testes com Vitest, Testing Library e Playwright.',
+      deployUrl: 'https://restaurante-comandas.vercel.app/',
       highlights: [
         'Isolamento multi-tenant com integridade referencial por tenant_id.',
         'Autenticação própria, sessões HTTP-only e permissões por perfil.',
@@ -154,7 +155,7 @@ export const resumeData = {
     {
       course: 'Tecnologia em Análise e Desenvolvimento de Sistemas',
       institution: 'Universidade Anhembi Morumbi',
-      period: 'Início: Julho de 2025 — Previsão de conclusão: Janeiro de 2028',
+      period: 'Início: Julho de 2025 — Previsão de conclusão: Setembro de 2027',
     },
   ] as Education[],
   languages: [

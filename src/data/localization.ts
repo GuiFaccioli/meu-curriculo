@@ -181,7 +181,7 @@ export function getLocalizedResumeData(locale: Locale) {
           ...resumeData.education[0],
           course: 'Systems Analysis and Development',
           institution: 'Anhembi Morumbi University',
-          period: 'Started: July 2025 — Expected graduation: January 2028',
+          period: 'Started: July 2025 — Expected graduation: September 2027',
         },
       ],
       languages: [
@@ -243,7 +243,7 @@ export function getLocalizedResumeData(locale: Locale) {
         ...resumeData.education[0],
         course: 'Análisis y Desarrollo de Sistemas',
         institution: 'Universidade Anhembi Morumbi',
-        period: 'Inicio: julio de 2025 — Conclusión prevista: enero de 2028',
+        period: 'Inicio: julio de 2025 — Conclusión prevista: septiembre de 2027',
       },
     ],
     languages: [
